@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, re_path
 
 from MediaLibrary import views, testdb
+from WebPage import views as WebPage_views
 
 urlpatterns = [
     re_path(r'^$', views.hello),
     path('testdb/', testdb.read_db),
+    path('imgs/', WebPage_views.imgs),
 ]
