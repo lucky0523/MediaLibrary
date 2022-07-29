@@ -22,7 +22,7 @@ KEY_SIZE = 'm_size'
 KEY_LIST = 'm_list'
 
 
-class MediaType(Enum):
+class FileType(Enum):
     NOT = 0
     Bluray = 1
     Remux = 2
@@ -69,17 +69,17 @@ def scan_media(path, media_list):
         sub_path_name = sub_path.name.lower()
         if sub_path.is_dir():
             if sub_path_name == 'bdmv':
-                media_list_append(media_list, path, MediaType.Bluray)
+                media_list_append(media_list, path, FileType.Bluray)
                 break
             else:
                 scan_media(sub_path, media_list)
         elif sub_path.is_file() and is_media_file(sub_path_name):
             if sub_path_name.__contains__('web-dl'):
-                media_list_append(media_list, sub_path, MediaType.Web)
+                media_list_append(media_list, sub_path, FileType.Web)
             elif sub_path_name.endswith('.iso'):
-                media_list_append(media_list, sub_path, MediaType.Bluray)
+                media_list_append(media_list, sub_path, FileType.Bluray)
             else:
-                media_list_append(media_list, sub_path, MediaType.Remux)
+                media_list_append(media_list, sub_path, FileType.Remux)
 
 
 if __name__ == '__main__':
