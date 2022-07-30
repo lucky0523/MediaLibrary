@@ -10,7 +10,6 @@ LOG_TAG = '[MediaCollect] '
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
 logger = logging.getLogger(LOG_TAG)
 
-
 KEY_CONFIG_FOLDER = 'media_folder'
 KEY_CONFIG_DISK_NAME = 'disk_name'
 KEY_CONFIG_DISK_SPACE = 'disk_space'
@@ -19,7 +18,8 @@ KEY_CONFIG_DISK_SN = 'disk_sn'
 KEY_PATH = 'm_path'
 KEY_TYPE = 'm_type'
 KEY_SIZE = 'm_size'
-KEY_LIST = 'm_list'
+KEY_ADD_LIST = 'add_list'
+KEY_DEL_LIST = 'del_list'
 
 
 class FileType(Enum):
@@ -36,7 +36,7 @@ def read_config(path):
     f = open(path + '/conf.json', encoding='utf-8')
     text = f.read()
     f.close()
-    logger.info('Get config:\r\n'+text)
+    logger.info('Get config:\r\n' + text)
     config = json.loads(text)
     return config
 
@@ -47,10 +47,9 @@ def calc_size(path):
     if path.is_dir():
         for root, dirs, files in os.walk(path):
             size += sum([getsize(join(root, name)) for name in files])
-            size = size / 1048576
     else:
-        size = getsize(path) / 1048576
-    return round(size, 2)
+        size = getsize(path)
+    return round(size / 1048576, 2)
 
 
 def is_media_file(file_name):
@@ -84,6 +83,7 @@ def scan_media(path, media_list):
 
 if __name__ == '__main__':
     app_path = os.path.dirname(os.path.realpath(sys.argv[0]))
+    logger.info('Working at ' + app_path)
     if platform.system() == 'Windows':
         root_path = app_path.split(':\\')[0] + ':\\'
         config = read_config(app_path)
@@ -94,9 +94,9 @@ if __name__ == '__main__':
         upload_content = {
             KEY_CONFIG_DISK_NAME: config[KEY_CONFIG_DISK_NAME],
             KEY_CONFIG_DISK_SN: config[KEY_CONFIG_DISK_SN],
-            KEY_LIST: result_list,
+            KEY_ADD_LIST: result_list,
         }
         print(upload_content)
-        f = open('r.txt', 'w')
+        f = open(app_path + 'r.txt', 'w')
         f.write(json.dumps(upload_content, sort_keys=True, indent=4, separators=(',', ': ')))
         f.close()
