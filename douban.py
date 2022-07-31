@@ -1,3 +1,5 @@
+import json
+
 import requests
 from datetime import datetime
 
@@ -17,4 +19,5 @@ print(params)
 x = requests.get(url=_base_url + "/search/movie", params=params, headers=_headers)
 
 # 返回 json 数据
-print(x.json())
+
+print(json.dumps(x.json(), sort_keys=True, indent=4, separators=(',', ': ')))

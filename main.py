@@ -5,21 +5,11 @@ import platform
 import sys
 from enum import Enum
 from os.path import join, getsize
+import StaticKey
 
 LOG_TAG = '[MediaCollect] '
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
 logger = logging.getLogger(LOG_TAG)
-
-KEY_CONFIG_FOLDER = 'media_folder'
-KEY_CONFIG_DISK_NAME = 'disk_name'
-KEY_CONFIG_DISK_SPACE = 'disk_space'
-KEY_CONFIG_DISK_SN = 'disk_sn'
-
-KEY_PATH = 'm_path'
-KEY_TYPE = 'm_type'
-KEY_SIZE = 'm_size'
-KEY_ADD_LIST = 'add_list'
-KEY_DEL_LIST = 'del_list'
 
 
 class FileType(Enum):
@@ -57,9 +47,9 @@ def is_media_file(file_name):
 
 
 def media_list_append(media_list, path, m_type):
-    canonical_path = path.path[path.path.find(config[KEY_CONFIG_FOLDER]):]
+    canonical_path = path.path[path.path.find(config[StaticKey.KEY_CONFIG_FOLDER]):]
     size = calc_size(path)
-    media_list.append({KEY_PATH: canonical_path, KEY_TYPE: m_type.value, KEY_SIZE: size})
+    media_list.append({StaticKey.KEY_PATH: canonical_path, StaticKey.KEY_TYPE: m_type.value, StaticKey.KEY_SIZE: size})
     logger.info('Add a media, path:' + canonical_path + ', type:' + str(m_type) + ', size:' + str(size) + 'MB.')
 
 
@@ -87,16 +77,18 @@ if __name__ == '__main__':
     if platform.system() == 'Windows':
         root_path = app_path.split(':\\')[0] + ':\\'
         config = read_config(app_path)
-        media_path = root_path + config[KEY_CONFIG_FOLDER]
+        media_path = root_path + config[StaticKey.KEY_CONFIG_FOLDER]
         result_list = []
         scan_media(media_path, result_list)
         logger.info('Scan done! Found ' + str(result_list.__len__()) + ' media files.')
         upload_content = {
-            KEY_CONFIG_DISK_NAME: config[KEY_CONFIG_DISK_NAME],
-            KEY_CONFIG_DISK_SN: config[KEY_CONFIG_DISK_SN],
-            KEY_ADD_LIST: result_list,
+            StaticKey.KEY_CONFIG_DISK_VENDOR: config[StaticKey.KEY_CONFIG_DISK_VENDOR],
+            StaticKey.KEY_CONFIG_DISK_SERIES: config[StaticKey.KEY_CONFIG_DISK_SERIES],
+            StaticKey.KEY_CONFIG_DISK_SPACE: config[StaticKey.KEY_CONFIG_DISK_SPACE],
+            StaticKey.KEY_CONFIG_DISK_SN: config[StaticKey.KEY_CONFIG_DISK_SN],
+            StaticKey.KEY_ADD_LIST: result_list,
         }
         print(upload_content)
-        f = open(app_path + 'r.txt', 'w')
+        f = open(app_path + '\\r.txt', 'w')
         f.write(json.dumps(upload_content, sort_keys=True, indent=4, separators=(',', ': ')))
         f.close()
