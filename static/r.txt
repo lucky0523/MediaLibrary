@@ -1,0 +1,28 @@
+{
+    "add_list": [
+        {
+            "m_path": "\\Movies\\General.Magic.2018.REPACK.1080p.AMZN.WEB-DL.DDP2.0.H.264-NTG\\General.Magic.2018.REPACK.1080p.AMZN.WEB-DL.DDP2.0.H.264-NTG.mkv",
+            "m_size": 6444.0,
+            "m_type": 3
+        },
+        {
+            "m_path": "\\Movies\\The.Big.Short.2015.BluRay.1080p.DTS-HD.MA.7.1.x265.10bit-CHD\\aa.mkv",
+            "m_size": 99,
+            "m_type": 2
+        },
+        {
+            "m_path": "\\Movies\\The.Gray.Man.2022.1080p.NF.WEB-DL.DDP.5.1.Atmos.H.265-KKYY@CHDBits\\aaa.iso",
+            "m_size": 125,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\The.Green.Mile.1999.UHD.Blu-ray.2160p.HEVC.Atmos.TrueHD.7.1-nn@CHDBits",
+            "m_size": 4.08,
+            "m_type": 1
+        }
+    ],
+    "disk_series": "Elements",
+    "disk_sn": "9KGE9JNL",
+    "disk_space": 14,
+    "disk_vendor": "WD"
+}

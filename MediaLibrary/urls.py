@@ -23,4 +23,5 @@ urlpatterns = [
     re_path(r'^$', views.hello),
     path('testdb/', testdb.read_db),
     path('imgs/', WebPage_views.imgs),
+    path('upload/', testdb.upload)
 ]
