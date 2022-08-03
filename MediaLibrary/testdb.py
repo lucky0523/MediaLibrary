@@ -2,13 +2,14 @@
 import json
 import logging
 import os.path
+import time
 from pathlib import Path
 from django.http import HttpResponse
 
 import MediaModel.utils
 from MediaModel.models import Media
 from MediaLibrary.common import StaticKey
-from MediaLibrary.query import douban
+from MediaLibrary.query import doubanapi
 
 LOG_TAG = '[testdb] '
 logging.basicConfig(level=StaticKey.LOG_LEVEL, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
@@ -46,8 +47,21 @@ def upload(request):
     disk_sn = content[StaticKey.KEY_CONFIG_DISK_SN]
     for media_info in add_list:
         logger.info(media_info)
-        test1 = Media(disk_sn=disk_sn)
-        test1.compile(media_info)
+        test1 = Media(disk_sn=disk_sn,
+                      file_size=media_info[StaticKey.KEY_SIZE],
+                      file_type=media_info[StaticKey.KEY_TYPE],
+                      path=media_info[StaticKey.KEY_PATH])
         logger.info(test1)
+        test1.save()
     f.close()
     return HttpResponse('bbb')
+
+
+def match(request):
+    logger.info('Start match info!')
+    list = Media.objects.all()
+    # 输出所有数据
+    for model in list:
+        time.sleep(1)
+        model.match()
+    return HttpResponse('match')

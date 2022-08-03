@@ -1,5 +1,7 @@
 import logging
 
+LANGUAGE = 'zh-cn'
+
 LOG_LEVEL = logging.DEBUG
 
 KEY_CONFIG_FOLDER = 'media_folder'
@@ -13,3 +15,6 @@ KEY_TYPE = 'm_type'
 KEY_SIZE = 'm_size'
 KEY_ADD_LIST = 'add_list'
 KEY_DEL_LIST = 'del_list'
+
+KEY_DOUBAN_API = 0
+KEY_TMDB_API = 1

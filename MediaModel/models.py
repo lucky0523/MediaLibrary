@@ -5,7 +5,7 @@ from django.db import models
 
 import MediaModel.utils
 from MediaLibrary.common import StaticKey
-from MediaLibrary.query import douban
+from MediaLibrary.query import InfoQuery
 
 LOG_TAG = '[MediaModel.models] '
 logging.basicConfig(level=StaticKey.LOG_LEVEL, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
@@ -17,12 +17,14 @@ class Media(models.Model):
     imdb_id = models.CharField(max_length=32)
     douban_id = models.CharField(max_length=32)
     tmdb_id = models.CharField(max_length=32)
-    title = models.CharField(max_length=200, default="", null=True, blank=True)
     douban_read = models.BooleanField(default=False)
     local_read = models.BooleanField(default=False)
+    title = models.CharField(max_length=200, default="", null=True, blank=True)
+    i18n_title = models.CharField(max_length=200, default="", null=True, blank=True)
+    language = models.CharField(max_length=32, default="", null=True, blank=True)
     director = models.CharField(max_length=32, default="", null=True, blank=True)
     actor = models.CharField(max_length=32, default="", null=True, blank=True)
-    year = models.IntegerField(default=0)
+    release_date = models.DateField()
     disk_sn = models.CharField(max_length=32, default="", null=True, blank=True)
     path = models.CharField(max_length=100, default="", null=True, blank=True)
     update_time = models.DateTimeField(auto_now=True)
@@ -59,19 +61,14 @@ class Media(models.Model):
                     self.year,
                     self.disk_sn,
                     self.path,
-                    self.media_type,
+                    self.get_media_type_display(),
                     self.get_file_type_display(),
-                    self.get_media_type_display())
+                    self.file_size)
 
-    def compile(self, media_info):
-        self.file_size = media_info[StaticKey.KEY_SIZE]
-        self.file_type = media_info[StaticKey.KEY_TYPE]
-        print('xxxx' + str(media_info[StaticKey.KEY_TYPE]))
-        print('yyyy' + str(self.file_type))
-        self.path = media_info[StaticKey.KEY_PATH]
+    def match(self):
         media_name = os.path.basename(self.path)
-        key_word = MediaModel.utils.return_keyword(media_name)
-        search_result = douban.search(key_word)
-        if search_result['total'] > 0:
-            douban_info = search_result['items'][0]
-            logger.debug(douban_info)
+        key_word, year = MediaModel.utils.return_keyword(media_name)
+        if InfoQuery.auto_match_movie(self, key_word, year):
+            self.save()
+        else:
+            pass
