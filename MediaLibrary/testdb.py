@@ -58,10 +58,11 @@ def upload(request):
 
 
 def match(request):
-    logger.info('Start match info!')
     list = Media.objects.all()
+    logger.info('Start match info: Found '+str(list.__len__())+' Media.')
     # 输出所有数据
     for model in list:
         time.sleep(1)
+
         model.match()
     return HttpResponse('match')

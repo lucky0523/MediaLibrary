@@ -24,7 +24,7 @@ class Media(models.Model):
     language = models.CharField(max_length=32, default="", null=True, blank=True)
     director = models.CharField(max_length=32, default="", null=True, blank=True)
     actor = models.CharField(max_length=32, default="", null=True, blank=True)
-    release_date = models.DateField()
+    release_date = models.DateField(null=True, blank=True)
     disk_sn = models.CharField(max_length=32, default="", null=True, blank=True)
     path = models.CharField(max_length=100, default="", null=True, blank=True)
     update_time = models.DateTimeField(auto_now=True)
@@ -58,7 +58,7 @@ class Media(models.Model):
     def __str__(self):
         return 'Title:{}\r\nYear:{}\r\nDisk_SN:{}\r\nPath:{}\r\nMedia type:{}\r\nFile type:{}\r\nSize:{}MB' \
             .format(self.title,
-                    self.year,
+                    self.release_date,
                     self.disk_sn,
                     self.path,
                     self.get_media_type_display(),
@@ -68,7 +68,17 @@ class Media(models.Model):
     def match(self):
         media_name = os.path.basename(self.path)
         key_word, year = MediaModel.utils.return_keyword(media_name)
-        if InfoQuery.auto_match_movie(self, key_word, year):
+        info_result = InfoQuery.auto_match_movie(key_word, year)
+        if True:
+            self.imdb_id = info_result.imdb_id
+            self.tmdb_id = info_result.tmdb_id
+            self.title = info_result.title
+            self.i18n_title = info_result.i18n_title
+            self.language = info_result.language
+            self.director = info_result.director
+            self.actor = info_result.actor
+            # self.release_date = info_result.release_date
+            self.media_type = info_result.media_type
             self.save()
         else:
             pass
