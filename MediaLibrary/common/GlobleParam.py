@@ -1,3 +1,3 @@
-from MediaLibrary.common import StaticKey
+from MediaLibrary.common import Static
 
-g_search_api = StaticKey.KEY_TMDB_API
+g_search_api = Static.KEY_TMDB_API

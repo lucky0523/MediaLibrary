@@ -4,11 +4,11 @@ import os
 from django.db import models
 
 import MediaModel.utils
-from MediaLibrary.common import StaticKey
+from MediaLibrary.common import Static
 from MediaLibrary.query import InfoQuery
 
 LOG_TAG = '[MediaModel.models] '
-logging.basicConfig(level=StaticKey.LOG_LEVEL, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
+logging.basicConfig(level=Static.LOG_LEVEL, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
 logger = logging.getLogger(LOG_TAG)
 
 
@@ -77,8 +77,13 @@ class Media(models.Model):
             self.language = info_result.language
             self.director = info_result.director
             self.actor = info_result.actor
-            # self.release_date = info_result.release_date
+            self.release_date = info_result.release_date
             self.media_type = info_result.media_type
             self.save()
         else:
             pass
+
+    def download_images(self):
+        for image_type in Static.KEY_IMAGE_TYPES:
+            if not os.path.exists(Static.PATH_FILMS_IMAGES + self.imdb_id + '/' + image_type):
+                InfoQuery.get_movie_image(self.imdb_id, image_type)

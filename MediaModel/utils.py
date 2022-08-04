@@ -1,10 +1,13 @@
 import logging
+import os
 import re
 
-from MediaLibrary.common import StaticKey
+import requests
+
+from MediaLibrary.common import Static
 
 LOG_TAG = '[MediaModel.utils]'
-logging.basicConfig(level=StaticKey.LOG_LEVEL, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
+logging.basicConfig(level=Static.LOG_LEVEL, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
 logger = logging.getLogger(LOG_TAG)
 
 SPLIT_SYMBOLS = ['uhd', '1080p', 'bluray', 'blu-ray', 'repack']

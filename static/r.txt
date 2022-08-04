@@ -6,12 +6,12 @@
             "m_type": 3
         },
         {
-            "m_path": "\\Movies\\The.Big.Short.2015.BluRay.1080p.DTS-HD.MA.7.1.x265.10bit-CHD\\aa.mkv",
+            "m_path": "\\Movies\\The.Big.Short.2015.BluRay.1080p.DTS-HD.MA.7.1.x265.10bit-CHD\\The.Big.Short.2015.BluRay.1080p.DTS-HD.MA.7.1.x265.10bit-CHD.mkv",
             "m_size": 99,
             "m_type": 2
         },
         {
-            "m_path": "\\Movies\\The.Gray.Man.2022.1080p.NF.WEB-DL.DDP.5.1.Atmos.H.265-KKYY@CHDBits\\aaa.iso",
+            "m_path": "\\Movies\\The.Gray.Man.2022.1080p.NF.WEB-DL.DDP.5.1.Atmos.H.265-KKYY@CHDBits\\The.Gray.Man.2022.1080p.NF.WEB-DL.DDP.5.1.Atmos.H.265-KKYY@CHDBits.iso",
             "m_size": 125,
             "m_type": 1
         },

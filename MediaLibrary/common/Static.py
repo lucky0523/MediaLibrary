@@ -1,6 +1,6 @@
 import logging
 
-LANGUAGE = 'zh-cn'
+LANGUAGE = 'zh'
 
 LOG_LEVEL = logging.DEBUG
 
@@ -18,3 +18,9 @@ KEY_DEL_LIST = 'del_list'
 
 KEY_DOUBAN_API = 0
 KEY_TMDB_API = 1
+
+PATH_FILMS_IMAGES = './static/films_folder/'
+KEY_IMAGE_TYPE_POSTER = 'posters'
+KEY_IMAGE_TYPE_LOGO = 'logos'
+KEY_IMAGE_TYPE_BACKDROP = 'backdrops'
+KEY_IMAGE_TYPES = [KEY_IMAGE_TYPE_POSTER, KEY_IMAGE_TYPE_LOGO, KEY_IMAGE_TYPE_BACKDROP]

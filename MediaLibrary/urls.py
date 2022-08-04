@@ -25,4 +25,5 @@ urlpatterns = [
     path('imgs/', WebPage_views.imgs),
     path('upload/', testdb.upload),
     path('match/', testdb.match),
+    path('image/', testdb.refresh_images),
 ]
