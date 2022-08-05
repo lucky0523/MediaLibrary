@@ -59,11 +59,14 @@ def get_movie_detail(mid):
         pass
 
 
-def get_movie_image(mid, image_type):
+def get_movie_image(mid, image_category):
+    file_path = ''
     if GlobleParam.g_search_api == Static.KEY_TMDB_API:
         result = tmdbapi.get_movie_image(mid)
-        image_list = result[image_type]
+        image_list = result[image_category+'s']
         if image_list.__len__() > 0:
-            tmdbapi.download_image(image_list[0]['file_path'], Static.PATH_FILMS_IMAGES + mid + '/', image_type[0:-1])
+            file_path = tmdbapi.download_image(image_list[0]['file_path'], Static.PATH_FILMS_IMAGES + mid + '/',
+                                               image_category)
     elif GlobleParam.g_search_api == Static.KEY_DOUBAN_API:
         pass
+    return file_path

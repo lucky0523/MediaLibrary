@@ -73,4 +73,5 @@ def refresh_images(request):
     # 输出所有数据
     for model in mlist:
         model.download_images()
+        model.save()
     return HttpResponse('images')

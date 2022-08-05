@@ -26,11 +26,12 @@ class Media(models.Model):
     actor = models.CharField(max_length=32, default="", null=True, blank=True)
     release_date = models.DateField(null=True, blank=True)
     disk_sn = models.CharField(max_length=32, default="", null=True, blank=True)
-    path = models.CharField(max_length=100, default="", null=True, blank=True)
+    path = models.CharField(max_length=180, default="", null=True, blank=True)
     update_time = models.DateTimeField(auto_now=True)
     upload_time = models.DateTimeField(auto_now_add=True)
     file_size = models.FloatField(default=0)
     subtitle = models.CharField(max_length=32, default="", null=True, blank=True)
+    image_paths = models.TextField(default="", null=True, blank=True)
     resolution_enum = (
         (1, '2K'),
         (2, '4K')
@@ -84,6 +85,15 @@ class Media(models.Model):
             pass
 
     def download_images(self):
-        for image_type in Static.KEY_IMAGE_TYPES:
-            if not os.path.exists(Static.PATH_FILMS_IMAGES + self.imdb_id + '/' + image_type):
-                InfoQuery.get_movie_image(self.imdb_id, image_type)
+        image_paths_dict = {}
+        try:
+            if self.image_paths != '':
+                image_paths_dict = eval(self.image_paths)
+        except SyntaxError:
+            logger.error('Image path eval error: ' + self.image_paths)
+        for image_category in Static.KEY_IMAGE_CATEGORY:
+            if image_category not in image_paths_dict \
+                    or image_paths_dict[image_category] == '' \
+                    or not os.path.exists(image_paths_dict[image_category]):
+                image_paths_dict[image_category] = InfoQuery.get_movie_image(self.imdb_id, image_category)
+        self.image_paths = str(image_paths_dict)

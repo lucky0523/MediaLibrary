@@ -1,7 +1,12 @@
+import logging
 import os
 
 import requests
 from MediaLibrary.common import Static
+
+LOG_TAG = '[MediaModel.query.tmdbapi] '
+logging.basicConfig(level=Static.LOG_LEVEL, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
+logger = logging.getLogger(LOG_TAG)
 
 _urls = {
     "movie_search": "/search/movie",
@@ -43,9 +48,12 @@ def get_movie_image(mid):
     return x.json()
 
 
-def download_image(remote_path, path, filename):
-    os.makedirs(path, exist_ok=True)
+def download_image(remote_path, dest_dir, filename):
+    logger.info('Start download image: ' + _image_base_url + remote_path)
+    os.makedirs(dest_dir, exist_ok=True)
     r = requests.get(_image_base_url + remote_path)
-    with open(path + '/' + filename + '.' + remote_path.split('.')[-1], 'wb') as f:
-        print(f.tell())
+    local_path = dest_dir + '/' + filename + '.' + remote_path.split('.')[-1]
+    with open(local_path, 'wb') as f:
         f.write(r.content)  # 写入二进制内容
+        f.close()
+    return local_path

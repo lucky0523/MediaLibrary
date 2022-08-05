@@ -34,7 +34,16 @@
       {% for item in Items %}
       <div class="col-6 col-md-3 col-xl-2">
         <div class="card card-sm card-link-pop rounded-3">
-            <img src="{{ item }}" class="card-img-top" style="border-top-left-radius:8px !important; border-top-right-radius:8px !important; object-fit:contain;">
+            <a href='javascript:show_mediainfo_modal("{{ item.title }}", "{{ item.year }}")'>
+            <img src="{{ item.image }}" class="card-img-top" style="border-top-left-radius:8px !important; border-top-right-radius:8px !important; object-fit:contain;">
+            </a>
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div><strong>{{ item.title }} ({{ item.year }})</strong></div>
+                  </div>
+                </div>
+            </div>
         </div>
       </div>
       {% endfor %}
