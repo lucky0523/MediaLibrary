@@ -16,14 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 
-from MediaLibrary import views, testdb
+from MediaLibrary import views
 from WebPage import views as WebPage_views
 
 urlpatterns = [
     re_path(r'^$', views.hello),
-    path('testdb/', testdb.read_db),
     path('imgs/', WebPage_views.imgs),
-    path('upload/', testdb.upload),
-    path('match/', testdb.match),
-    path('image/', testdb.refresh_images),
+    path('upload/', views.upload),
+    path('match/', views.match),
+    path('image/', views.refresh_images),
 ]

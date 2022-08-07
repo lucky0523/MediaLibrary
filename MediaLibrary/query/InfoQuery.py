@@ -11,8 +11,9 @@ logger = logging.getLogger(LOG_TAG)
 
 
 class InfoResult:
-    imdb_id = 0
+    imdb_id = ''
     douban_id = 0
+    tmdb_id = 0
     title = ''
     i18n_title = {}
     language = ''
@@ -63,7 +64,7 @@ def get_movie_image(mid, image_category):
     file_path = ''
     if GlobleParam.g_search_api == Static.KEY_TMDB_API:
         result = tmdbapi.get_movie_image(mid)
-        image_list = result[image_category+'s']
+        image_list = result[image_category + 's']
         if image_list.__len__() > 0:
             file_path = tmdbapi.download_image(image_list[0]['file_path'], Static.PATH_FILMS_IMAGES + mid + '/',
                                                image_category)

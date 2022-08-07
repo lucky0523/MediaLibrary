@@ -19,7 +19,7 @@ KEY_DEL_LIST = 'del_list'
 KEY_DOUBAN_API = 0
 KEY_TMDB_API = 1
 
-PATH_FILMS_IMAGES = './static/films_folder/'
+PATH_FILMS_IMAGES = './dynamic/films_folder/'
 KEY_IMAGE_CATEGORY_POSTER = 'poster'
 KEY_IMAGE_CATEGORY_LOGO = 'logo'
 KEY_IMAGE_CATEGORY_BACKDROP = 'backdrop'
