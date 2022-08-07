@@ -22,7 +22,8 @@ from WebPage import views as WebPage_views
 urlpatterns = [
     re_path(r'^$', views.hello),
     path('imgs/', WebPage_views.imgs),
-    path('upload/', views.upload),
+    path('upload/', views.receive),
     path('match/', views.match),
     path('image/', views.refresh_images),
+    path('test/', views.test_local),
 ]
