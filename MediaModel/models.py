@@ -1,6 +1,7 @@
 import logging
 import os
 
+from django.core.exceptions import ValidationError
 from django.db import models
 
 import MediaModel.utils
@@ -67,22 +68,31 @@ class Media(models.Model):
                     self.file_size)
 
     def match(self):
-        media_name = os.path.basename(self.path)
-        key_word, year = MediaModel.utils.return_keyword(media_name)
-        info_result = InfoQuery.auto_match_movie(key_word, year)
-        if True:
-            self.imdb_id = info_result.imdb_id
-            self.tmdb_id = info_result.tmdb_id
-            self.title = info_result.title
-            self.i18n_title = info_result.i18n_title
-            self.language = info_result.language
-            self.director = info_result.director
-            self.actor = info_result.actor
-            self.release_date = info_result.release_date
-            self.media_type = info_result.media_type
-            self.save()
+        print(self.path)
+        if self.imdb_id == '':
+            media_name = os.path.basename(self.path)
+            key_word, year = MediaModel.utils.return_keyword(media_name)
+            info_result = InfoQuery.auto_match_movie(key_word, year)
+            print('xxxx')
+            if info_result:
+                try:
+                    self.imdb_id = info_result.imdb_id
+                    self.tmdb_id = info_result.tmdb_id
+                    self.title = info_result.title
+                    self.i18n_title = info_result.i18n_title
+                    self.language = info_result.language
+                    self.director = info_result.director
+                    self.actor = info_result.actor
+                    self.release_date = info_result.release_date
+                    self.media_type = info_result.media_type
+                    self.save()
+                except ValidationError as e:
+                    logger.error(e)
+            else:
+                logger.info('Cannot match this: ' + self.path)
+                pass
         else:
-            pass
+            logger.info('Matched, title: ' + self.i18n_title)
 
     def download_images(self):
         image_paths_dict = {}

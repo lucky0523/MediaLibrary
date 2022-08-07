@@ -4,6 +4,7 @@ import time
 
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.db.models import Q
 
 from MediaModel.models import Media
 from MediaLibrary.common import Static
@@ -59,12 +60,14 @@ def receive(request):
 
 
 def match(request):
-    mlist = Media.objects.all()
+    mlist = Media.objects.filter(imdb_id='')
     logger.info('Start match info: Found ' + str(mlist.__len__()) + ' Media.')
     # 输出所有数据
-    for model in mlist:
-        time.sleep(1)
-        model.match()
+    length = mlist.__len__()
+    for i in range(length):
+        logger.info('Handle %d/%d, path: %s' % (i+1, length, mlist[i].path))
+        # time.sleep(1)
+        mlist[i].match()
     return HttpResponse('match')
 
 

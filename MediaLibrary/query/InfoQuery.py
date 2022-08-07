@@ -22,6 +22,12 @@ class InfoResult:
     release_date = ''
     media_type = 0
 
+    def __str__(self):
+        return 'Title:{}\r\nYear:{}' \
+            .format(self.title,
+                    self.release_date,
+                    )
+
 
 def auto_match_movie(keyword, year=-1):
     info_result = InfoResult()
@@ -39,7 +45,7 @@ def auto_match_movie(keyword, year=-1):
             info_result.release_date = lucky_detail['release_date']
             return info_result
         else:
-            return info_result
+            return None
     elif GlobleParam.g_search_api == Static.KEY_DOUBAN_API:
         return info_result
 
