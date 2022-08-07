@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
+from django.views.static import serve
 
 from MediaLibrary import views
 from WebPage import views as WebPage_views
+from django.conf import settings
 
 urlpatterns = [
     re_path(r'^$', views.hello),
@@ -26,4 +28,5 @@ urlpatterns = [
     path('match/', views.match),
     path('image/', views.refresh_images),
     path('test/', views.test_local),
+    re_path('dynamic/(?P<path>.*)', serve, {'document_root': settings.DYNAMIC_ROOT}),
 ]
