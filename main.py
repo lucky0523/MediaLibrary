@@ -5,11 +5,16 @@ import platform
 import sys
 from enum import Enum
 from os.path import join, getsize
-import StaticKey
+
+import requests
+
+import Static
 
 LOG_TAG = '[MediaCollect] '
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
 logger = logging.getLogger(LOG_TAG)
+
+_base_url = 'http://192.168.1.120:8000'
 
 
 class FileType(Enum):
@@ -47,9 +52,9 @@ def is_media_file(file_name):
 
 
 def media_list_append(media_list, path, m_type):
-    canonical_path = path.path[path.path.find(config[StaticKey.KEY_CONFIG_FOLDER]):]
+    canonical_path = path.path[path.path.find(config[Static.KEY_CONFIG_FOLDER]):]
     size = calc_size(path)
-    media_list.append({StaticKey.KEY_PATH: canonical_path, StaticKey.KEY_TYPE: m_type.value, StaticKey.KEY_SIZE: size})
+    media_list.append({Static.KEY_PATH: canonical_path, Static.KEY_TYPE: m_type.value, Static.KEY_SIZE: size})
     logger.info('Add a media, path:' + canonical_path + ', type:' + str(m_type) + ', size:' + str(size) + 'MB.')
 
 
@@ -71,24 +76,32 @@ def scan_media(path, media_list):
                 media_list_append(media_list, sub_path, FileType.Remux)
 
 
+def upload(content_json):
+    response = requests.post(url=_base_url + '/upload/', json=content_json)
+    logger.info(response.text)
+    return response.text
+
+
 if __name__ == '__main__':
     app_path = os.path.dirname(os.path.realpath(sys.argv[0]))
     logger.info('Working at ' + app_path)
     if platform.system() == 'Windows':
         root_path = app_path.split(':\\')[0] + ':\\'
         config = read_config(app_path)
-        media_path = root_path + config[StaticKey.KEY_CONFIG_FOLDER]
+        media_path = root_path + config[Static.KEY_CONFIG_FOLDER]
         result_list = []
         scan_media(media_path, result_list)
         logger.info('Scan done! Found ' + str(result_list.__len__()) + ' media files.')
         upload_content = {
-            StaticKey.KEY_CONFIG_DISK_VENDOR: config[StaticKey.KEY_CONFIG_DISK_VENDOR],
-            StaticKey.KEY_CONFIG_DISK_SERIES: config[StaticKey.KEY_CONFIG_DISK_SERIES],
-            StaticKey.KEY_CONFIG_DISK_SPACE: config[StaticKey.KEY_CONFIG_DISK_SPACE],
-            StaticKey.KEY_CONFIG_DISK_SN: config[StaticKey.KEY_CONFIG_DISK_SN],
-            StaticKey.KEY_ADD_LIST: result_list,
+            Static.KEY_API_VERSION: Static.API_VERSION,
+            Static.KEY_CONFIG_DISK_VENDOR: config[Static.KEY_CONFIG_DISK_VENDOR],
+            Static.KEY_CONFIG_DISK_SERIES: config[Static.KEY_CONFIG_DISK_SERIES],
+            Static.KEY_CONFIG_DISK_SPACE: config[Static.KEY_CONFIG_DISK_SPACE],
+            Static.KEY_CONFIG_DISK_SN: config[Static.KEY_CONFIG_DISK_SN],
+            Static.KEY_ADD_LIST: result_list,
         }
         print(upload_content)
-        f = open(app_path + '\\r.txt', 'w')
-        f.write(json.dumps(upload_content, sort_keys=True, indent=4, separators=(',', ': ')))
-        f.close()
+        upload(upload_content)
+        # f = open(app_path + '\\r.txt', 'w')
+        # f.write(json.dumps(upload_content, sort_keys=True, indent=4, separators=(',', ': ')))
+        # f.close()

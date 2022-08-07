@@ -1,3 +1,6 @@
+KEY_API_VERSION = 'api_version'
+API_VERSION = '0.1'
+
 KEY_CONFIG_FOLDER = 'media_folder'
 KEY_CONFIG_DISK_VENDOR = 'disk_vendor'
 KEY_CONFIG_DISK_SERIES = 'disk_series'
