@@ -65,19 +65,20 @@ def match(request):
     # 输出所有数据
     length = mlist.__len__()
     for i in range(length):
-        logger.info('Handle %d/%d, path: %s' % (i+1, length, mlist[i].path))
+        logger.info('Handle %d/%d, path: %s' % (i + 1, length, mlist[i].path))
         # time.sleep(1)
         mlist[i].match()
     return HttpResponse('match')
 
 
 def refresh_images(request):
-    mlist = Media.objects.all()
+    mlist = Media.objects.filter(~Q(imdb_id=''))
     logger.info('Start refresh images: Found ' + str(mlist.__len__()) + ' Media.')
-    # 输出所有数据
-    for model in mlist:
-        model.download_images()
-        model.save()
+    length = mlist.__len__()
+    for i in range(length):
+        logger.info('Handle %d/%d, path: %s' % (i + 1, length, mlist[i].path))
+        # time.sleep(1)
+        mlist[i].download_images()
     return HttpResponse('images')
 
 

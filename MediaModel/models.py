@@ -67,6 +67,15 @@ class Media(models.Model):
                     self.get_file_type_display(),
                     self.file_size)
 
+    def get_i18n_title(self):
+        i_title = 'Error title'
+        try:
+            i_title = eval(self.i18n_title)[Static.LANGUAGE]
+        except SyntaxError as e:
+            logger.error('Get i18n title error')
+            logger.error(e)
+        return i_title
+
     def match(self):
         print(self.path)
         if self.imdb_id == '':
@@ -92,18 +101,67 @@ class Media(models.Model):
                 logger.info('Cannot match this: ' + self.path)
                 pass
         else:
-            logger.info('Matched, title: ' + self.i18n_title)
+            logger.info('Matched, title: ' + self.get_i18n_title())
+
+    # def download_images(self):
+    #     image_paths_dict = {}
+    #     try:
+    #         if self.image_paths != '':
+    #             image_paths_dict = eval(self.image_paths)
+    #     except SyntaxError:
+    #         logger.error('Image path eval error: ' + self.image_paths)
+    #     for image_category in Static.KEY_IMAGE_CATEGORIES:
+    #         if image_category not in image_paths_dict \
+    #                 or image_paths_dict[image_category] == '' \
+    #                 or not os.path.exists(image_paths_dict[image_category]):
+    #             image_paths_dict[image_category] = InfoQuery.get_movie_image(self.imdb_id, image_category)
+    #             self.image_paths = str(image_paths_dict)
+    #             self.save()
+    #         else:
+    #             logger.info('Images exist.')
 
     def download_images(self):
+        logger.info('Download [%s %s] images: start.' % (self.get_i18n_title(), self.imdb_id))
+        image_dir = Static.PATH_FILMS_IMAGES + str(self.imdb_id) + '/'
         image_paths_dict = {}
+        need_download_categories = []
+        need_save = False
         try:
             if self.image_paths != '':
                 image_paths_dict = eval(self.image_paths)
         except SyntaxError:
             logger.error('Image path eval error: ' + self.image_paths)
-        for image_category in Static.KEY_IMAGE_CATEGORY:
-            if image_category not in image_paths_dict \
-                    or image_paths_dict[image_category] == '' \
-                    or not os.path.exists(image_paths_dict[image_category]):
+        if os.path.isdir(image_dir):
+            logger.info('Folder is exists. Check files.')
+            for image_category in Static.KEY_IMAGE_CATEGORIES:
+                if image_category in image_paths_dict and os.path.isfile(image_paths_dict[image_category]):
+                    logger.info('[%s] file exists and matched' % image_category)
+                    pass
+                else:
+                    logger.info('[%s] file not matched' % image_category)
+                    image_exists = False
+                    for sub_path in os.scandir(image_dir):
+                        if image_category == os.path.basename(sub_path).split('.')[0]:
+                            logger.info('[%s] file found, replace it.' % os.path.basename(sub_path))
+                            image_exists = True
+                            need_save = True
+                            image_paths_dict[image_category] = image_dir + os.path.basename(sub_path)
+                            break
+                    if not image_exists:
+                        need_download_categories.append(image_category)
+
+        else:
+            logger.info('Folder is not exists. Download all!')
+            need_download_categories = Static.KEY_IMAGE_CATEGORIES.copy()
+
+        if need_download_categories.__len__() > 0:
+            need_save = True
+            logger.info('Need download: %s.' % need_download_categories)
+            for image_category in need_download_categories:
                 image_paths_dict[image_category] = InfoQuery.get_movie_image(self.imdb_id, image_category)
-        self.image_paths = str(image_paths_dict)
+
+        if need_save:
+            self.image_paths = str(image_paths_dict)
+            self.save()
+        else:
+            logger.info('Download [%s %s] images: Nothing has changed.' % (self.get_i18n_title(), self.imdb_id))
