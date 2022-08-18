@@ -25,6 +25,56 @@
             margin-right: 8%;
             margin-left: 8%;
         }
+
+        /*设置div样式的整体布局*/
+        .page-icon {
+            margin: 20px 0 0 0; /*设置距离顶部20像素*/
+            font-size: 0; /*修复行内元素之间空隙间隔*/
+            text-align: center; /*设置内容居中显示*/
+        }
+
+        /*设置共有的的样式布局，主要是进行代码优化，提高运行效率*/
+        .page-icon a, .page-disabled, .page-next {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 4px 10px 5px;
+            font-size: 14PX; /*修复行内元素之间空隙间隔*/
+            margin-right: 10px;
+        }
+
+        /*对 a 标签进行样式布局 */
+        .page-icon a {
+            text-decoration: none; /*取消链接的下划线*/
+            color: #005aa0;
+        }
+
+        .page-current {
+            color: #ff6600;
+            padding: 4px 10px 5px;
+            font-size: 14PX; /*修复行内元素之间空隙间隔*/
+        }
+
+        .page-disabled {
+            color: #ccc;
+        }
+
+        .page-next i, .page-disabled i {
+            cursor: pointer; /*设置鼠标经过时的显示状态，这里设置的是显示状态为小手状态*/
+            display: inline-block; /*设置显示的方式为行内块元素*/
+            width: 5px;
+            height: 9px;
+            background-image: url(http://img.mukewang.com/547fdbc60001bab900880700.gif); /*获取图标的背景链接*/
+        }
+
+        .page-disabled i {
+            background-position: -80px -608px;
+            margin-right: 3px;
+        }
+
+        .page-next i {
+            background-position: -62px -608px;
+            margin-left: 3px;
+        }
     </style>
 </head>
 <body>
@@ -32,7 +82,7 @@
 <div class="page-body">
     <div class="container-xl">
         <div class="row row-cards" id="recommend_content">
-            {% for item in Items %}
+            {% for item in PageData %}
                 <div class="col-6 col-md-3 col-xl-2">
                     <div class="card card-sm card-link-pop rounded-3">
                         <a href='javascript:show_mediainfo_modal({{ item }})'>
@@ -50,9 +100,34 @@
                 </div>
             {% endfor %}
         </div>
+        <br>
+        <nav>
+            <ul class="page-icon">
+                <!— 分页功能前端的方向箭头代码-->
+                {% if PageData.has_previous %}
+                    <a class="page-next" href="?page={{ PageData.previous_page_number }}">上一页<i></i></a>
+                {% endif %}
+                <!— 分页功能显示页码的中间部分代码-->
+                {% for page_num in PageData.paginator.page_range %}
+                    {% if page_num == PageData.number %}
+                        <span class="page-current">{{ page_num }}</span>
+                    {% else %}
+                        <a href="?page={{ page_num }}">{{ page_num }}</a>
+                    {% endif %}
+                {% endfor %}
+                <!— 分页功能末端的方向箭头代码-->
+                {% if  PageData.has_next %}
+                    <a class="page-next" href="?page={{ PageData.next_page_number }}">下一页<i></i></a>
+                {% endif %}
+            </ul>
+        </nav>
+        <br><br><br>
     </div>
+
 </div>
-<!-- 媒体详情 -->
+
+</div>
+<!-- 模态窗口 -->
 <div class="modal modal-blur fade" id="system-media-modal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
