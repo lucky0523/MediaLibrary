@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>霍霍的电影出租屋</title>
+		<meta name="referrer" content="never">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="msapplication-TileColor" content="#1e293b" />
+		<meta name="theme-color" content="#1e293b" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<link rel="icon" href="/static/images/logo.png">
+		<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="/static/images/logo.png">
+		<meta name="Robots" content="noindex,nofollow,noarchive">
+		<!-- CSS files -->
+		<link href="/static/css/tabler.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.tooltip-inner {
+			            text-align: left;
+			        }
+
+			        .fileTree {
+			            width: 240px;
+			            max-height: 200px;
+			            overflow-y: scroll;
+			            overflow-x: hidden;
+			            position: absolute;
+			            display: none;
+			        }
+		</style>
+	</head>
+
+	<body>
+		<div class="page">
+			<aside class="navbar navbar-vertical navbar-expand-lg navbar-dark sticky-top">
+				<div class="container-xl">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-auto-collapse="true"
+							data-bs-target="#navbar-menu">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<h1 class="navbar-brand" style="filter:brightness(0) invert(1)">
+						<a href="/">
+							<img src="/static/images/logo.svg" width="110" height="32" alt="霍霍的电影出租屋"
+								 class="navbar-brand-image">
+						</a>
+					</h1>
+					<div class="navbar-nav flex-row d-lg-none"></div>
+					<div class="collapse navbar-collapse" id="navbar-menu">
+						<div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last d-lg-none">
+							<div class="input-icon">
+								<span class="input-icon-addon">
+									<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+										 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<circle cx="10" cy="10" r="7" />
+										<line x1="21" y1="21" x2="15" y2="15" />
+									</svg>
+								</span>
+								<input type="text" value="" class="form-control home_search_word" placeholder="搜索...">
+							</div>
+						</div>
+						<ul class="navbar-nav pt-lg-3">
+							<li class="nav-item">
+								{#页面启动时自动加载此处代码，为什么？搜索注释：打开第一个页面#}
+								<a class="nav-link" href="javascript:void(0)" onclick="dynamic_load('gallery')">
+									<span class="nav-link-icon d-md-none d-lg-inline-block">
+										<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+											 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+											 stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+											<polyline points="5 12 3 12 12 3 21 12 19 12" />
+											<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+											<path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+										</svg>
+									</span>
+									<span class="nav-link-title">
+										海报墙
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="javascript:void(0)" onclick="dynamic_load('gallery')">
+									<span class="nav-link-icon d-md-none d-lg-inline-block">
+										<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+											 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+											 stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+											<polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
+											<line x1="12" y1="12" x2="20" y2="7.5" />
+											<line x1="12" y1="12" x2="12" y2="21" />
+											<line x1="12" y1="12" x2="4" y2="7.5" />
+											<line x1="16" y1="5.25" x2="8" y2="9.75" />
+										</svg>
+									</span>
+									<span class="nav-link-title">
+										资源搜索
+									</span>
+								</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+								   data-bs-auto-close="false"
+								   role="button" aria-expanded="false">
+									<span class="nav-link-icon d-md-none d-lg-inline-block">
+										<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+											 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+											 stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+											<path
+												  d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+										</svg>
+									</span>
+									<span class="nav-link-title">
+										推荐
+									</span>
+								</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="javascript:void(0)" onclick="dynamic_load('recommend?t=hm')">
+										TMDB热门电影
+									</a>
+									<a class="dropdown-item" href="javascript:void(0)" onclick="dynamic_load('recommend?t=nt')">
+										TMDB最新电视剧
+									</a>
+									<a class="dropdown-item" href="javascript:void(0)"
+									   onclick="dynamic_load('recommend?t=dbom')">
+										正在热映
+										<span class="badge badge-sm bg-orange text-case ms-2">HOT</span>
+									</a>
+									<a class="dropdown-item" href="javascript:void(0)"
+									   onclick="dynamic_load('recommend?t=dbnm')">
+										即将上映
+										<span class="badge badge-sm bg-green text-case ms-2">NEW</span>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+			<header class="navbar navbar-expand-md navbar-light d-none d-lg-flex d-print-none sticky-top">
+				<div class="container-xl">
+
+					<div class="collapse navbar-collapse">
+						<div>
+							<div class="input-icon">
+								<span class="input-icon-addon">
+									<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+										 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										<desc>Download more icon variants from https://tabler-icons.io/i/search</desc>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<circle cx="10" cy="10" r="7" />
+										<line x1="21" y1="21" x2="15" y2="15" />
+									</svg>
+								</span>
+								<input type="text" value="" class="form-control home_search_word" placeholder="搜索…"
+									   aria-label="资源搜索">
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="page-wrapper">
+				<div id="page_content"></div>
+				<footer class="footer footer-transparent d-print-none">
+					<div class="container-xl">
+						<div class="row text-center align-items-center flex-row-reverse">
+							<div class="col-12 col-lg-auto mt-3 mt-lg-0">
+								<ul class="list-inline list-inline-dots mb-0">
+									<li class="list-inline-item">
+										Copyright &copy; 2022
+										<a href="." class="link-secondary">NASTool</a>.
+										All rights reserved.
+									</li>
+									<li class="list-inline-item">
+										{{ AppVersion }}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd" aria-labelledby="消息中心">
+			<div class="offcanvas-header">
+				<h2 class="offcanvas-title" id="offcanvasEndLabel">消息中心</h2>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body" style="padding:0.5rem 0.5rem;">
+				<div class="list-group list-group-flush" id="system-messages">
+				</div>
+				<div class="mt-3" align="center">
+					<button class="btn" type="button" data-bs-dismiss="offcanvas">
+						关闭
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- 等待框 -->
+		<div class="modal" id="modal-wait" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-full-width modal-dialog-centered" role="document">
+				<div class="spinner-border text-primary m-auto"></div>
+			</div>
+		</div>
+		<!-- 确认提示框 -->
+		<div class="modal modal-blur fade" id="system-confirm-modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<div class="modal-status bg-danger"></div>
+					<div class="modal-body text-center py-4">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-danger icon-lg" width="24" height="24"
+							 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+							 stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<path d="M12 9v2m0 4v.01" />
+							<path d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75" />
+						</svg>
+						<h3>确认</h3>
+						<div class="text-muted" id="system_confirm_message">是否确定？</div>
+					</div>
+					<div class="modal-footer">
+						<div class="w-100">
+							<div class="row">
+								<div class="col">
+									<a href="#" class="btn w-100" data-bs-dismiss="modal">
+										取消
+									</a>
+								</div>
+								<div class="col">
+									<button class="btn btn-danger w-100" id="system_confirm_btn">
+										确定
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 询问框 -->
+		<div class="modal modal-blur fade" id="system-ask-modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="modal-title">询问</div>
+						<div id="system_ask_message">是否执行？</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-link link-secondary me-auto" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-danger" id="system_ask_btn">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 成功提示 -->
+		<div class="modal modal-blur fade" id="system-success-modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<div class="modal-status bg-success"></div>
+					<div class="modal-body text-center py-4">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-green icon-lg" width="24" height="24"
+							 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+							 stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<circle cx="12" cy="12" r="9" />
+							<path d="M9 12l2 2l4 -4" />
+						</svg>
+						<h3>成功</h3>
+						<div class="text-muted" id="system_success_message">成功！</div>
+					</div>
+					<div class="modal-footer">
+						<div class="w-100">
+							<div class="row">
+								<div class="col">
+									<a href="#" class="btn btn-success w-100" data-bs-dismiss="modal">
+										确定
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 失败提示 -->
+		<div class="modal modal-blur fade" id="system-fail-modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<div class="modal-status bg-warning"></div>
+					<div class="modal-body text-center py-4">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-warning icon-lg" width="24" height="24"
+							 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+							 stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<path d="M12 9v2m0 4v.01" />
+							<path d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75" />
+						</svg>
+						<h3>失败</h3>
+						<div class="text-muted" id="system_fail_message">失败！</div>
+					</div>
+					<div class="modal-footer">
+						<div class="w-100">
+							<div class="row">
+								<div class="col">
+									<a href="#" class="btn btn-warning w-100" data-bs-dismiss="modal">
+										确定
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 媒体详情 -->
+		<div class="modal modal-blur fade" id="system-media-modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="card">
+						<div class="ribbon ribbon-top ribbon-bookmark bg-purple" id="system_media_vote"></div>
+						<div class="row row-0">
+							<div class="col-3 d-none d-lg-block">
+								<img id="system_media_poster" src="" onerror="this.src='/static/images/no-image.png'"
+									 class="w-100 h-100 object-cover">
+							</div>
+							<div class="col">
+								<div class="card-body">
+									<h4 class="card-title mb-3">
+										<a href="#">
+											<strong id="system_media_name"></strong>
+										</a>
+										<br />
+										<span class="text-muted" id="system_release_date"></span>
+									</h4>
+									<div class="text-muted mb-3" id="system_media_overview">
+									</div>
+									<div id="system_sites_info"></div>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex">
+							<a href="#" target="_blank" class="card-btn" id="system_media_url_btn">
+								详情
+							</a>
+							<a href="javascript:void(0)" class="card-btn" id="system_media_rss_btn">
+								订阅
+							</a>
+							<a href="javascript:void(0)" class="card-btn" id="system_media_search_btn">
+								搜索
+							</a>
+							<a href="javascript:void(0)" class="card-btn" data-bs-dismiss="modal">
+								关闭
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/static/js/jquery-3.1.1.min.js"></script>
+		<script src="/static/js/tabler.min.js"></script>
+		<!-- 公共函数 -->
+		<script type="text/javascript">
+			//显示全局加载框
+			    function show_wait_process() {
+			        $("#modal-wait").modal("show");
+			    }
+
+			    //关闭全局加载框
+			    function hide_wait_process() {
+			        $("#modal-wait").modal("hide");
+			    }
+
+			    //显示确认提示框
+			    function show_confirm_modal(title, func) {
+			        $("#system_confirm_message").text(title);
+			        $("#system_confirm_btn").unbind('click');
+			        $("#system_confirm_btn").click(func);
+			        $("#system-confirm-modal").modal("show");
+			    }
+
+			    //隐藏确认提示框
+			    function hide_confirm_modal() {
+			        $("#system-confirm-modal").modal("hide");
+			    }
+
+			    //显示询问提示框
+			    function show_ask_modal(title, func) {
+			        $("#system_ask_message").text(title);
+			        $("#system_ask_btn").unbind('click');
+			        $("#system_ask_btn").click(func);
+			        $("#system-ask-modal").modal("show");
+			    }
+
+			    //隐藏询问提示框
+			    function hide_ask_modal() {
+			        $("#system-ask-modal").modal("hide");
+			    }
+
+			    //显示成功提示
+			    function show_success_modal(title) {
+			        $("#system_success_message").text(title);
+			        $("#system-success-modal").modal("show");
+			    }
+
+			    //显示失败提示
+			    function show_fail_modal(title) {
+			        $("#system_fail_message").text(title);
+			        $("#system-fail-modal").modal("show");
+			    }
+
+			    //隐藏媒体详情
+			    function hide_mediainfo_modal() {
+			        $("#system-media-modal").modal("hide");
+			    }
+
+
+			    //导航点击
+			    function dynamic_load(page) {
+			        nid = page.split("?")[0];
+			        $("#navbar-menu").find("li").removeClass("active");
+			        $("#navbar-menu").find("a").removeClass("active");
+			        $("#navbar-menu").find("a").each(function () {
+			            if ($(this).attr("onclick") == "navmenu('" + page + "')") {
+			                if ($(this).attr("class") == "dropdown-item") {
+			                    $(this).addClass("active");
+			                } else {
+			                    $(this).parent().addClass("active");
+			                }
+			            }
+			        });
+			        $("#navbar-menu").collapse('hide');
+			        show_wait_process();
+			        $(window).unbind('scroll');
+			        page = page.replaceAll(" ", "%20");
+			        $("#page_content").load(page, {}, function (response, status, xhr) {
+			            hide_wait_process();
+			        });
+			    }
+
+
+			    //搜索
+			    function search_mediainfo_media(tmdbid, doubanid, title, typestr) {
+			        hide_mediainfo_modal();
+			        if (!tmdbid && doubanid) {
+			            tmdbid = "DB:" + doubanid;
+			        }
+			        var param = {"tmdbid": tmdbid, "search_word": title, "media_type": typestr};
+			        show_wait_process();
+			        ajax_post("search", param, function (ret) {
+			            hide_wait_process();
+			            if (ret.code == 0) {
+			                dynamic_load('search?s=' + title);
+			            } else {
+			                show_fail_modal(ret.msg);
+			            }
+			        });
+			    }
+		</script>
+		<script type="text/javascript">
+			//浏览器兼容
+			    String.prototype.replaceAll = function (s1, s2) {
+			        return this.replace(new RegExp(s1, "gm"), s2)
+			    }
+
+
+			    //事件
+			    $(document).ready(function () {
+			        // 搜索输入框
+			        $('.home_search_word').bind('keypress', function (event) {
+			            if (event.keyCode == "13") {
+			                if (!$(this).val()) {
+			                    return;
+			                }
+			                dynamic_load('medialist?s=' + $(this).val() + '&f=1');
+			                $(this).val('');
+			            }
+			        });
+
+			        //加载页面
+			        //打开第一个页面
+			        $("#navbar-menu").find("a[onclick]").first().trigger('click');
+			    });
+
+			    //禁止双指放大
+			    document.documentElement.addEventListener('touchstart', function (event) {
+			        if (event.touches.length > 1) {
+			            event.preventDefault();
+			        }
+			    }, false);
+
+			    //禁止双击放大
+			    var lastTouchEnd = 0;
+			    document.documentElement.addEventListener('touchend', function (event) {
+			        var now = Date.now();
+			        if (now - lastTouchEnd <= 300) {
+			            event.preventDefault();
+			        }
+			        lastTouchEnd = now;
+			    }, false);
+		</script>
+	</body>
+
+</html>

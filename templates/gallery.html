@@ -1,0 +1,160 @@
+<head>
+    <style>
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .item {
+            width: 25%;
+            float: left;
+        }
+
+        .item img {
+            width: 100%;
+        }
+
+        .modal-dialog {
+            max-width: max-content;
+            margin-right: 8%;
+            margin-left: 8%;
+        }
+
+        div.center {
+            text-align: center;
+        }
+
+        ul.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.pagination li {
+            display: inline;
+        }
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        ul.pagination li a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        ul.pagination li a:hover:not(.active) {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<div class="page-body">
+    <div class="container-xl">
+        <div class="row row-cards" id="recommend_content">
+            {% for item in PageData %}
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card card-sm card-link-pop rounded-3">
+                        <a href='javascript:show_mediainfo_modal({{ item }})'>
+                            <img src="{{ item.image }}" class="card-img-top"
+                                 style="border-top-left-radius:8px !important; border-top-right-radius:8px !important; object-fit:contain;">
+                        </a>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div><strong>{{ item.title }} ({{ item.year }})</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <br>
+        <div class="center">
+            <ul class="pagination">
+                <!— 分页功能前端的方向箭头代码-->
+                {% if PageData.has_previous %}
+                    <li><a href="javascript:void(0)" onclick="dynamic_load('gallery?page={{ PageData.previous_page_number }}')">«</a></li>
+                {% endif %}
+                <!— 分页功能显示页码的中间部分代码-->
+                {% for page_num in PageData.paginator.page_range %}
+                    {% if page_num == PageData.number %}
+                        <li><a class="active">{{ page_num }}</a></li>
+                    {% else %}
+                        <li><a href="javascript:void(0)" onclick="dynamic_load('gallery?page={{ page_num }}')">{{ page_num }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                <!— 分页功能末端的方向箭头代码-->
+                {% if  PageData.has_next %}
+                    <li><a href="javascript:void(0)" onclick="dynamic_load('gallery?page={{ PageData.next_page_number }}')">»</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <br><br><br>
+    </div>
+
+</div>
+
+</div>
+<!-- 模态窗口 -->
+<div class="modal modal-blur fade" id="system-media-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="card">
+                <div class="ribbon ribbon-top ribbon-bookmark bg-purple" id="system_media_vote"></div>
+                <div class="row row-0">
+                    <div class="col-3 d-lg-block">
+                        <img id="dialog_media_poster" src="" onerror="this.src='/static/images/no-image.png'"
+                             class="w-100 h-100 object-cover">
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">
+                                <div><strong id="dialog_media_name"></strong></div>
+                                <span class="text-muted" id="dialog_release_date"></span>
+                            </h4>
+                            <br/>
+                            <div id="dialog_media_overview">电影简介</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col">
+                <div class="card-body">
+                    <div>来自硬盘：<strong id="dialog_media_disk"></strong></div>
+                    <div id="dialog_media_path"></div>
+                    <br/>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <a href="javascript:void(0)" class="card-btn" data-bs-dismiss="modal">
+                    关闭
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript">
+    //显示媒体详情
+    function show_mediainfo_modal(item) {
+        $("#dialog_media_name").text(item.title);
+        $("#dialog_release_date").text(item.year);
+        $("#dialog_media_disk").text(item.disk);
+        $("#dialog_media_path").text(item.path);
+        $("#dialog_media_poster").attr("src", item.image);
+        $("#system-media-modal").modal("show");
+    }
+
+    //隐藏媒体详情
+    function hide_mediainfo_modal() {
+        $("#system-media-modal").modal("hide");
+    }
+
+</script>
