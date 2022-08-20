@@ -22,12 +22,12 @@ from WebPage import views as WebPage_views
 from django.conf import settings
 
 urlpatterns = [
-    re_path(r'^$', views.nav),
+    re_path(r'^$', WebPage_views.nav),
     path('upload/', views.receive),
     path('match/', views.match),
     path('image/', views.refresh_images),
     path('test/', views.test_local),
-    path('nav/', views.nav),
+    path('nav/', WebPage_views.nav),
     path('imgs', WebPage_views.gallery),
     path('gallery', WebPage_views.gallery),
     re_path('dynamic/(?P<path>.*)', serve, {'document_root': settings.DYNAMIC_ROOT}),

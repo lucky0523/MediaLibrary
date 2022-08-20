@@ -75,10 +75,6 @@ def refresh_images(request):
     return HttpResponse('images')
 
 
-def nav(request):
-    return render(request, 'navigation.html')
-
-
 def test_local(request):
     f = open('./static/r.txt', 'r')
     text = f.read()

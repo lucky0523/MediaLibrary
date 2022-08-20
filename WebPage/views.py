@@ -7,11 +7,20 @@ from django.shortcuts import render
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from MediaModel.models import Media
+from HardDiskModel.models import HardDisk
 from MediaLibrary.common import Static
 
 LOG_TAG = '[WebPage.views] '
 logging.basicConfig(level=Static.LOG_LEVEL, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
 logger = logging.getLogger(LOG_TAG)
+
+
+def nav(request):
+    dlist = HardDisk.objects.all()
+    for d in dlist:
+        logger.info('\r\n'+str(d))
+    context = {'DiskList': dlist}
+    return render(request, 'navigation.html', context)
 
 
 def gallery(request):

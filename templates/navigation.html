@@ -34,6 +34,10 @@
 			            position: absolute;
 			            display: none;
 			        }
+
+                    .footer {
+                        margin-top: 0;
+                    }
 		</style>
 	</head>
 
@@ -45,10 +49,11 @@
 							data-bs-target="#navbar-menu">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<h1 class="navbar-brand" style="filter:brightness(0) invert(1)">
+					<h1 class="navbar-brand">
 						<a href="/">
-							<img src="/static/images/logo.svg" width="110" height="32" alt="霍霍的电影出租屋"
+							<img src="/static/images/logo.png" width="110" height="32" alt="霍霍的电影出租屋"
 								 class="navbar-brand-image">
+                            霍霍的电影出租屋
 						</a>
 					</h1>
 					<div class="navbar-nav flex-row d-lg-none"></div>
@@ -92,11 +97,8 @@
 											 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
 											 stroke-linejoin="round">
 											<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-											<polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
-											<line x1="12" y1="12" x2="20" y2="7.5" />
-											<line x1="12" y1="12" x2="12" y2="21" />
-											<line x1="12" y1="12" x2="4" y2="7.5" />
-											<line x1="16" y1="5.25" x2="8" y2="9.75" />
+											<circle cx="10" cy="10" r="7" />
+											<line x1="21" y1="21" x2="15" y2="15" />
 										</svg>
 									</span>
 									<span class="nav-link-title">
@@ -113,30 +115,25 @@
 											 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
 											 stroke-linejoin="round">
 											<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-											<path
-												  d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+											<polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
+											<line x1="12" y1="12" x2="20" y2="7.5" />
+											<line x1="12" y1="12" x2="12" y2="21" />
+											<line x1="12" y1="12" x2="4" y2="7.5" />
+											<line x1="16" y1="5.25" x2="8" y2="9.75" />
 										</svg>
 									</span>
 									<span class="nav-link-title">
-										推荐
+										硬盘
 									</span>
 								</a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="javascript:void(0)" onclick="dynamic_load('recommend?t=hm')">
-										TMDB热门电影
-									</a>
-									<a class="dropdown-item" href="javascript:void(0)" onclick="dynamic_load('recommend?t=nt')">
-										TMDB最新电视剧
-									</a>
-									<a class="dropdown-item" href="javascript:void(0)"
-									   onclick="dynamic_load('recommend?t=dbom')">
-										正在热映
-										<span class="badge badge-sm bg-orange text-case ms-2">HOT</span>
-									</a>
-									<a class="dropdown-item" href="javascript:void(0)"
-									   onclick="dynamic_load('recommend?t=dbnm')">
-										即将上映
-										<span class="badge badge-sm bg-green text-case ms-2">NEW</span>
+                                    {% for item in DiskList %}
+                                        <a class="dropdown-item" href="javascript:void(0)" onclick="dynamic_load('')">
+                                            {{ item.name }}
+                                        </a>
+                                    {% endfor %}
+									<a class="dropdown-item" href="javascript:void(0)" onclick="dynamic_load('')">
+										<span class="badge badge-sm bg-green text-case">硬盘设置</span>
 									</a>
 								</div>
 							</li>
@@ -254,25 +251,30 @@
 
 			    //导航点击
 			    function dynamic_load(page) {
-			        nid = page.split("?")[0];
-			        $("#navbar-menu").find("li").removeClass("active");
-			        $("#navbar-menu").find("a").removeClass("active");
-			        $("#navbar-menu").find("a").each(function () {
-			            if ($(this).attr("onclick") == "navmenu('" + page + "')") {
-			                if ($(this).attr("class") == "dropdown-item") {
-			                    $(this).addClass("active");
-			                } else {
-			                    $(this).parent().addClass("active");
-			                }
-			            }
-			        });
-			        $("#navbar-menu").collapse('hide');
-			        show_wait_process();
-			        $(window).unbind('scroll');
-			        page = page.replaceAll(" ", "%20");
-			        $("#page_content").load(page, {}, function (response, status, xhr) {
-			            hide_wait_process();
-			        });
+                    if (page !== '') {
+                        nid = page.split("?")[0];
+                        $("#navbar-menu").find("li").removeClass("active");
+                        $("#navbar-menu").find("a").removeClass("active");
+                        $("#navbar-menu").find("a").each(function () {
+                            if ($(this).attr("onclick") == "navmenu('" + page + "')") {
+                                if ($(this).attr("class") == "dropdown-item") {
+                                    $(this).addClass("active");
+                                } else {
+                                    $(this).parent().addClass("active");
+                                }
+                            }
+                        });
+                        $("#navbar-menu").collapse('hide');
+                        show_wait_process();
+                        $(window).unbind('scroll');
+                        page = page.replaceAll(" ", "%20");
+                        $("#page_content").load(page, {}, function (response, status, xhr) {
+                            hide_wait_process();
+                        });
+                    }
+                    else {
+                        console.log('Page is null!')
+                    }
 			    }
 
 
