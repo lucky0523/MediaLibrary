@@ -7,19 +7,12 @@ from django.shortcuts import render
 from django.db.models import Q
 
 from MediaModel.models import Media
+from HardDiskModel.models import HardDisk
 from MediaLibrary.common import Static
 
 LOG_TAG = '[MediaModel.views] '
 logging.basicConfig(level=Static.LOG_LEVEL, format='%(asctime)s - %(name)s %(levelname)s - %(message)s')
 logger = logging.getLogger(LOG_TAG)
-
-
-def hello(request):
-    context = {}
-    context['hello'] = 'Hello World!'
-    context['name'] = 'xxxx'
-    context['pic'] = '/static/films_folder/tt2379713/post.webp'
-    return render(request, 'demo.html', context)
 
 
 def receive(request):
@@ -102,3 +95,9 @@ def test_local(request):
         test1.save()
     f.close()
     return HttpResponse('bbb')
+
+
+def add_hard_disk(request):
+    hard_disk = HardDisk(vendor='WD', series='Elements', sn='9KGE9JNL', capacity=14)
+    hard_disk.save()
+    return HttpResponse('hhhh')

@@ -28,7 +28,7 @@ urlpatterns = [
     path('image/', views.refresh_images),
     path('test/', views.test_local),
     path('nav/', views.nav),
-    path('imgs', WebPage_views.imgs),
+    path('imgs', WebPage_views.gallery),
     path('gallery', WebPage_views.gallery),
     re_path('dynamic/(?P<path>.*)', serve, {'document_root': settings.DYNAMIC_ROOT}),
 ]
