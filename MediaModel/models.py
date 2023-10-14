@@ -68,13 +68,31 @@ class Media(models.Model):
                     self.file_size)
 
     def get_i18n_title(self):
-        i_title = 'Error title'
+        i_title = 'Error i18n title'
         try:
-            i_title = eval(self.i18n_title)[Static.LANGUAGE]
+            i_title = eval(self.i18n_title)[Static.LANGUAGE]  # eval()用以将json字符串转为字典
         except SyntaxError as e:
             logger.error('Get i18n title error')
             logger.error(e)
         return i_title
+
+    def get_title(self):
+        title = 'Error title'
+        try:
+            title = self.title
+        except SyntaxError as e:
+            logger.error('Get title error')
+            logger.error(e)
+        return title
+
+    def get_imdb_id(self):
+        title = 'Error title'
+        try:
+            title = self.imdb_id
+        except SyntaxError as e:
+            logger.error('Get title error')
+            logger.error(e)
+        return title
 
     def match(self):
         print(self.path)
@@ -121,7 +139,7 @@ class Media(models.Model):
     #             logger.info('Images exist.')
 
     def download_images(self):
-        logger.info('Download [%s %s] images: start.' % (self.get_i18n_title(), self.imdb_id))
+        logger.info('Start download [%s %s] images.' % (self.get_i18n_title(), self.imdb_id))
         image_dir = Static.PATH_FILMS_IMAGES + str(self.imdb_id) + '/'
         image_paths_dict = {}
         need_download_categories = []
@@ -158,6 +176,7 @@ class Media(models.Model):
             need_save = True
             logger.info('Need download: %s.' % need_download_categories)
             for image_category in need_download_categories:
+                logger.info('Download %s of "%s".' % (image_category, self.get_i18n_title()))
                 image_paths_dict[image_category] = InfoQuery.get_movie_image(self.imdb_id, image_category)
 
         if need_save:

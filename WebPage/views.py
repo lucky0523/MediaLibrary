@@ -35,7 +35,9 @@ def gallery(request):
         view_dict['year'] = media.release_date.year
         view_dict['disk'] = media.disk_sn
         view_dict['path'] = media.path
-        view_dict['title'] = media.get_i18n_title()
+        view_dict['i18n_title'] = media.get_i18n_title()
+        view_dict['title'] = media.get_title()
+        view_dict['imdb_id'] = media.get_imdb_id()
         if not media.image_paths == '':
             try:
                 view_dict['image'] = eval(media.image_paths)[Static.KEY_IMAGE_CATEGORY_POSTER][1:]

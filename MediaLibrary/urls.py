@@ -16,17 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from django.views.static import serve
+from django.conf import settings
 
 from MediaLibrary import views
 from WebPage import views as WebPage_views
-from django.conf import settings
 
 urlpatterns = [
     re_path(r'^$', WebPage_views.nav),
     path('upload/', views.receive),
     path('match/', views.match),
-    path('image/', views.refresh_images),
-    path('test/', views.test_local),
+    path('image', views.refresh_images),
+    path('test', views.test_local),
+    path('test_return', views.test_return),
     path('nav/', WebPage_views.nav),
     path('imgs', WebPage_views.gallery),
     path('gallery', WebPage_views.gallery),

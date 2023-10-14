@@ -64,7 +64,7 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center">
                                 <div>
-                                    <div><strong>{{ item.title }} ({{ item.year }})</strong></div>
+                                    <div><strong>{{ item.i18n_title }} ({{ item.year }})</strong></div>
                                 </div>
                             </div>
                         </div>
@@ -112,8 +112,9 @@
                     <div class="col">
                         <div class="card-body">
                             <h4 class="card-title mb-3">
-                                <div><strong id="dialog_media_name"></strong></div>
-                                <span class="text-muted" id="dialog_release_date"></span>
+                                <div><strong id="dialog_media_name"></strong> (<span id="dialog_release_date"></span>)</div>
+                                <span class="text-muted" id="dialog_i18n_title"></span>:
+                                <span class="text-muted" id="dialog_imdb_id">xx</span>
                             </h4>
                             <br/>
                             <div id="dialog_media_overview">电影简介</div>
@@ -143,8 +144,10 @@
 <script type="text/javascript">
     //显示媒体详情
     function show_mediainfo_modal(item) {
-        $("#dialog_media_name").text(item.title);
+        $("#dialog_media_name").text(item.i18n_title);
         $("#dialog_release_date").text(item.year);
+        $("#dialog_i18n_title").text(item.title);
+        $("#dialog_imdb_id").text(item.imdb_id);
         $("#dialog_media_disk").text(item.disk);
         $("#dialog_media_path").text(item.path);
         $("#dialog_media_poster").attr("src", item.image);

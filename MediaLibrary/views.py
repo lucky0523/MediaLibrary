@@ -97,3 +97,7 @@ def add_hard_disk(request):
     hard_disk = HardDisk(vendor='WD', series='Elements', sn='9KGE9JNL', capacity=14)
     hard_disk.save()
     return HttpResponse('hhhh')
+
+
+def test_return(request):
+    return HttpResponse('hhhh')
