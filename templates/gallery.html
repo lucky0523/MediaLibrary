@@ -77,19 +77,22 @@
             <ul class="pagination">
                 <!— 分页功能前端的方向箭头代码-->
                 {% if PageData.has_previous %}
-                    <li><a href="javascript:void(0)" onclick="dynamic_load('gallery?page={{ PageData.previous_page_number }}')">«</a></li>
+                    <li><a href="javascript:void(0)"
+                           onclick="dynamic_load('gallery?page={{ PageData.previous_page_number }}')">«</a></li>
                 {% endif %}
                 <!— 分页功能显示页码的中间部分代码-->
                 {% for page_num in PageData.paginator.page_range %}
                     {% if page_num == PageData.number %}
                         <li><a class="active">{{ page_num }}</a></li>
                     {% else %}
-                        <li><a href="javascript:void(0)" onclick="dynamic_load('gallery?page={{ page_num }}')">{{ page_num }}</a></li>
+                        <li><a href="javascript:void(0)"
+                               onclick="dynamic_load('gallery?page={{ page_num }}')">{{ page_num }}</a></li>
                     {% endif %}
                 {% endfor %}
                 <!— 分页功能末端的方向箭头代码-->
                 {% if  PageData.has_next %}
-                    <li><a href="javascript:void(0)" onclick="dynamic_load('gallery?page={{ PageData.next_page_number }}')">»</a></li>
+                    <li><a href="javascript:void(0)"
+                           onclick="dynamic_load('gallery?page={{ PageData.next_page_number }}')">»</a></li>
                 {% endif %}
             </ul>
         </div>
@@ -112,7 +115,8 @@
                     <div class="col">
                         <div class="card-body">
                             <h4 class="card-title mb-3">
-                                <div><strong id="dialog_media_name"></strong> (<span id="dialog_release_date"></span>)</div>
+                                <div><strong id="dialog_media_name"></strong> (<span id="dialog_release_date"></span>)
+                                </div>
                                 <span class="text-muted" id="dialog_i18n_title"></span>:
                                 <span class="text-muted" id="dialog_imdb_id">xx</span>
                             </h4>

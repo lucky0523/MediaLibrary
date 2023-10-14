@@ -1,384 +1,390 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>霍霍的电影出租屋</title>
-		<meta name="referrer" content="never">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="msapplication-TileColor" content="#1e293b" />
-		<meta name="theme-color" content="#1e293b" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="HandheldFriendly" content="True" />
-		<meta name="MobileOptimized" content="320" />
-		<link rel="icon" href="/static/images/logo.png">
-		<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="/static/images/logo.png">
-		<meta name="Robots" content="noindex,nofollow,noarchive">
-		<!-- CSS files -->
-		<link href="/static/css/tabler.min.css" rel="stylesheet" />
-		<style type="text/css">
-			.tooltip-inner {
-			            text-align: left;
-			        }
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>霍霍的电影出租屋</title>
+    <meta name="referrer" content="never">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="msapplication-TileColor" content="#1e293b"/>
+    <meta name="theme-color" content="#1e293b"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <link rel="icon" href="/static/images/logo.png">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="/static/images/logo.png">
+    <meta name="Robots" content="noindex,nofollow,noarchive">
+    <!-- CSS files -->
+    <link href="/static/css/tabler.min.css" rel="stylesheet"/>
+    <style type="text/css">
+        .tooltip-inner {
+            text-align: left;
+        }
 
-			        .fileTree {
-			            width: 240px;
-			            max-height: 200px;
-			            overflow-y: scroll;
-			            overflow-x: hidden;
-			            position: absolute;
-			            display: none;
-			        }
+        .fileTree {
+            width: 240px;
+            max-height: 200px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            position: absolute;
+            display: none;
+        }
 
-                    .footer {
-                        margin-top: 0;
-                    }
-		</style>
-	</head>
+        .footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
 
-	<body>
-		<div class="page">
-			<aside class="navbar navbar-vertical navbar-expand-lg navbar-dark sticky-top">
-				<div class="container-xl">
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-auto-collapse="true"
-							data-bs-target="#navbar-menu">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<h1 class="navbar-brand">
-						<a href="/">
-							<img src="/static/images/logo.png" width="110" height="32" alt="霍霍的电影出租屋"
-								 class="navbar-brand-image">
-                            霍霍的电影出租屋
-						</a>
-					</h1>
-					<div class="navbar-nav flex-row d-lg-none"></div>
-					<div class="collapse navbar-collapse" id="navbar-menu">
-						<div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last d-lg-none">
-							<div class="input-icon">
+<body>
+<div class="page">
+    <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-xl">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-auto-collapse="true"
+                    data-bs-target="#navbar-menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <h1 class="navbar-brand">
+                <a href="/">
+                    <img src="/static/images/logo.png" width="110" height="32" alt="霍霍的电影出租屋"
+                         class="navbar-brand-image">
+                    霍霍的电影出租屋
+                </a>
+            </h1>
+            <div class="navbar-nav flex-row d-lg-none"></div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last d-lg-none">
+                    <div class="input-icon">
 								<span class="input-icon-addon">
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-										 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-										<circle cx="10" cy="10" r="7" />
-										<line x1="21" y1="21" x2="15" y2="15" />
+									<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                         viewBox="0 0 24 24"
+                                         stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                         stroke-linejoin="round">
+										<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+										<circle cx="10" cy="10" r="7"/>
+										<line x1="21" y1="21" x2="15" y2="15"/>
 									</svg>
 								</span>
-								<input type="text" value="" class="form-control home_search_word" placeholder="搜索...">
-							</div>
-						</div>
-						<ul class="navbar-nav pt-lg-3">
-							<li class="nav-item">
-								{#页面启动时自动加载此处代码，为什么？搜索注释：打开第一个页面#}
-								<a class="nav-link" href="javascript:void(0)" onclick="dynamic_load('gallery')">
+                        <input type="text" value="" class="form-control home_search_word" placeholder="搜索...">
+                    </div>
+                </div>
+                <ul class="navbar-nav pt-lg-3">
+                    <li class="nav-item">
+                        {#页面启动时自动加载此处代码，为什么？搜索注释：打开第一个页面#}
+                        <a class="nav-link" href="javascript:void(0)" onclick="dynamic_load('gallery')">
 									<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-											 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-											 stroke-linejoin="round">
-											<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-											<polyline points="5 12 3 12 12 3 21 12 19 12" />
-											<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-											<path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+										<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                             stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+											<polyline points="5 12 3 12 12 3 21 12 19 12"/>
+											<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/>
+											<path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/>
 										</svg>
 									</span>
-									<span class="nav-link-title">
+                            <span class="nav-link-title">
 										海报墙
 									</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="javascript:void(0)" onclick="dynamic_load('gallery')">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="dynamic_load('gallery')">
 									<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-											 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-											 stroke-linejoin="round">
-											<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-											<circle cx="10" cy="10" r="7" />
-											<line x1="21" y1="21" x2="15" y2="15" />
+										<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                             stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+											<circle cx="10" cy="10" r="7"/>
+											<line x1="21" y1="21" x2="15" y2="15"/>
 										</svg>
 									</span>
-									<span class="nav-link-title">
+                            <span class="nav-link-title">
 										资源搜索
 									</span>
-								</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-								   data-bs-auto-close="false"
-								   role="button" aria-expanded="false">
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                           data-bs-auto-close="false"
+                           role="button" aria-expanded="false">
 									<span class="nav-link-icon d-md-none d-lg-inline-block">
-										<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-											 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-											 stroke-linejoin="round">
-											<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-											<polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
-											<line x1="12" y1="12" x2="20" y2="7.5" />
-											<line x1="12" y1="12" x2="12" y2="21" />
-											<line x1="12" y1="12" x2="4" y2="7.5" />
-											<line x1="16" y1="5.25" x2="8" y2="9.75" />
+										<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                             stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+											<polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"/>
+											<line x1="12" y1="12" x2="20" y2="7.5"/>
+											<line x1="12" y1="12" x2="12" y2="21"/>
+											<line x1="12" y1="12" x2="4" y2="7.5"/>
+											<line x1="16" y1="5.25" x2="8" y2="9.75"/>
 										</svg>
 									</span>
-									<span class="nav-link-title">
+                            <span class="nav-link-title">
 										硬盘
 									</span>
-								</a>
-								<div class="dropdown-menu">
-                                    {% for item in DiskList %}
-                                        <a class="dropdown-item" href="javascript:void(0)" onclick="dynamic_load('')">
-                                            {{ item.name }}
-                                        </a>
-                                    {% endfor %}
-									<a class="dropdown-item" href="javascript:void(0)" onclick="dynamic_load('')">
-										<span class="badge badge-sm bg-green text-case">硬盘设置</span>
-									</a>
-								</div>
-							</li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0)" onclick="test_load('test')">
+                        </a>
+                        <div class="dropdown-menu">
+                            {% for item in DiskList %}
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="dynamic_load('')">
+                                    {{ item.name }}
+                                </a>
+                            {% endfor %}
+                            <a class="dropdown-item" href="javascript:void(0)" onclick="dynamic_load('')">
+                                <span class="badge badge-sm bg-green text-case">硬盘设置</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="test_load('test')">
                                             <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
+                                                     height="24"
                                                      viewBox="0 0 24 24"
-                                                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                                     stroke-width="2" stroke="currentColor" fill="none"
+                                                     stroke-linecap="round"
                                                      stroke-linejoin="round">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                                     <circle cx="10" cy="10" r="7"/>
                                                     <line x1="21" y1="21" x2="15" y2="15"/>
                                                 </svg>
                                             </span>
-                                    <span class="nav-link-title">
-                                                测试本地数据匹配
-                                            </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript:void(0)" onclick="test_load('image')">
+                            <span class="nav-link-title">测试本地数据匹配</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="test_load('image')">
                                             <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
+                                                     height="24"
                                                      viewBox="0 0 24 24"
-                                                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                                     stroke-width="2" stroke="currentColor" fill="none"
+                                                     stroke-linecap="round"
                                                      stroke-linejoin="round">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                                     <circle cx="10" cy="10" r="7"/>
                                                     <line x1="21" y1="21" x2="15" y2="15"/>
                                                 </svg>
                                             </span>
-                                    <span class="nav-link-title">
-                                                测试刷新图片
-                                            </span>
-                                </a>
-                            </li>
-						</ul>
-					</div>
-				</div>
-			</aside>
-			<header class="navbar navbar-expand-md navbar-light d-none d-lg-flex d-print-none sticky-top">
-				<div class="container-xl">
+                            <span class="nav-link-title">测试刷新图片</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <header class="navbar navbar-expand-md navbar-light d-none d-lg-flex d-print-none sticky-top">
+        <div class="container-xl">
 
-					<div class="collapse navbar-collapse">
-						<div>
-							<div class="input-icon">
+            <div class="collapse navbar-collapse">
+                <div>
+                    <div class="input-icon">
 								<span class="input-icon-addon">
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-										 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                         viewBox="0 0 24 24"
+                                         stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                         stroke-linejoin="round">
 										<desc>Download more icon variants from https://tabler-icons.io/i/search</desc>
-										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-										<circle cx="10" cy="10" r="7" />
-										<line x1="21" y1="21" x2="15" y2="15" />
+										<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+										<circle cx="10" cy="10" r="7"/>
+										<line x1="21" y1="21" x2="15" y2="15"/>
 									</svg>
 								</span>
-								<input type="text" value="" class="form-control home_search_word" placeholder="搜索…"
-									   aria-label="资源搜索">
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-			<div class="page-wrapper">
-				<div id="page_content"></div>
-				<footer class="footer footer-transparent d-print-none">
-					<div class="container-xl">
-						<div class="row text-center align-items-center flex-row-reverse">
-							<div class="col-12 col-lg-auto mt-3 mt-lg-0">
-								<ul class="list-inline list-inline-dots mb-0">
-									<li class="list-inline-item">
-										Copyright &copy; 2022
-										<a href="." class="link-secondary">Huo</a>.
-										All rights reserved.
-									</li>
-									<li class="list-inline-item">
-										{{ AppVersion }}
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</footer>
-			</div>
-		</div>
-		<!-- 等待框 -->
-		<div class="modal" id="modal-wait" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-full-width modal-dialog-centered" role="document">
-				<div class="spinner-border text-primary m-auto"></div>
-			</div>
-		</div>
-		<script src="/static/js/jquery-3.1.1.min.js"></script>
-		<script src="/static/js/tabler.min.js"></script>
-		<!-- 公共函数 -->
-		<script type="text/javascript">
-			//显示全局加载框
-			    function show_wait_process() {
-			        $("#modal-wait").modal("show");
-			    }
+                        <input type="text" value="" class="form-control home_search_word" placeholder="搜索…"
+                               aria-label="资源搜索">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-wrapper">
+        <div id="page_content"></div>
+        <footer class="footer footer-transparent d-print-none">
+            <div class="container-xl">
+                <div class="row text-center align-items-center flex-row-reverse">
+                    <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                        <ul class="list-inline list-inline-dots mb-0">
+                            <li class="list-inline-item">
+                                Copyright &copy; 2022
+                                <a href="." class="link-secondary">Huo</a>.
+                                All rights reserved.
+                            </li>
+                            <li class="list-inline-item">
+                                {{ AppVersion }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<!-- 等待框 -->
+<div class="modal" id="modal-wait" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-full-width modal-dialog-centered" role="document">
+        <div class="spinner-border text-primary m-auto"></div>
+    </div>
+</div>
+<script src="/static/js/jquery-3.1.1.min.js"></script>
+<script src="/static/js/tabler.min.js"></script>
+<!-- 公共函数 -->
+<script type="text/javascript">
+    //显示全局加载框
+    function show_wait_process() {
+        $("#modal-wait").modal("show");
+    }
 
-			    //关闭全局加载框
-			    function hide_wait_process() {
-			        $("#modal-wait").modal("hide");
-			    }
+    //关闭全局加载框
+    function hide_wait_process() {
+        $("#modal-wait").modal("hide");
+    }
 
-			    //显示确认提示框
-			    function show_confirm_modal(title, func) {
-			        $("#system_confirm_message").text(title);
-			        $("#system_confirm_btn").unbind('click');
-			        $("#system_confirm_btn").click(func);
-			        $("#system-confirm-modal").modal("show");
-			    }
+    //显示确认提示框
+    function show_confirm_modal(title, func) {
+        $("#system_confirm_message").text(title);
+        $("#system_confirm_btn").unbind('click');
+        $("#system_confirm_btn").click(func);
+        $("#system-confirm-modal").modal("show");
+    }
 
-			    //隐藏确认提示框
-			    function hide_confirm_modal() {
-			        $("#system-confirm-modal").modal("hide");
-			    }
+    //隐藏确认提示框
+    function hide_confirm_modal() {
+        $("#system-confirm-modal").modal("hide");
+    }
 
-			    //显示询问提示框
-			    function show_ask_modal(title, func) {
-			        $("#system_ask_message").text(title);
-			        $("#system_ask_btn").unbind('click');
-			        $("#system_ask_btn").click(func);
-			        $("#system-ask-modal").modal("show");
-			    }
+    //显示询问提示框
+    function show_ask_modal(title, func) {
+        $("#system_ask_message").text(title);
+        $("#system_ask_btn").unbind('click');
+        $("#system_ask_btn").click(func);
+        $("#system-ask-modal").modal("show");
+    }
 
-			    //隐藏询问提示框
-			    function hide_ask_modal() {
-			        $("#system-ask-modal").modal("hide");
-			    }
+    //隐藏询问提示框
+    function hide_ask_modal() {
+        $("#system-ask-modal").modal("hide");
+    }
 
-			    //显示成功提示
-			    function show_success_modal(title) {
-			        $("#system_success_message").text(title);
-			        $("#system-success-modal").modal("show");
-			    }
+    //显示成功提示
+    function show_success_modal(title) {
+        $("#system_success_message").text(title);
+        $("#system-success-modal").modal("show");
+    }
 
-			    //显示失败提示
-			    function show_fail_modal(title) {
-			        $("#system_fail_message").text(title);
-			        $("#system-fail-modal").modal("show");
-			    }
+    //显示失败提示
+    function show_fail_modal(title) {
+        $("#system_fail_message").text(title);
+        $("#system-fail-modal").modal("show");
+    }
 
-			    //隐藏媒体详情
-			    function hide_mediainfo_modal() {
-			        $("#system-media-modal").modal("hide");
-			    }
+    //隐藏媒体详情
+    function hide_mediainfo_modal() {
+        $("#system-media-modal").modal("hide");
+    }
 
 
-                // test
-                function test_load(page) {
-                $("#page_content").load("image", {}, function (response, status, xhr) {
-                        hide_wait_process();
-                    });
+    // test
+    function test_load(page) {
+        $("#page_content").load("image", {}, function (response, status, xhr) {
+            hide_wait_process();
+        });
+    }
+
+    //导航点击
+    function dynamic_load(page) {
+        if (page !== '') {
+            nid = page.split("?")[0];
+            $("#navbar-menu").find("li").removeClass("active");
+            $("#navbar-menu").find("a").removeClass("active");
+            $("#navbar-menu").find("a").each(function () {
+                if ($(this).attr("onclick") == "navmenu('" + page + "')") {
+                    if ($(this).attr("class") == "dropdown-item") {
+                        $(this).addClass("active");
+                    } else {
+                        $(this).parent().addClass("active");
+                    }
                 }
-
-			    //导航点击
-			    function dynamic_load(page) {
-                    if (page !== '') {
-                        nid = page.split("?")[0];
-                        $("#navbar-menu").find("li").removeClass("active");
-                        $("#navbar-menu").find("a").removeClass("active");
-                        $("#navbar-menu").find("a").each(function () {
-                            if ($(this).attr("onclick") == "navmenu('" + page + "')") {
-                                if ($(this).attr("class") == "dropdown-item") {
-                                    $(this).addClass("active");
-                                } else {
-                                    $(this).parent().addClass("active");
-                                }
-                            }
-                        });
-                        $("#navbar-menu").collapse('hide');
-                        show_wait_process();
-                        $(window).unbind('scroll');
-                        page = page.replaceAll(" ", "%20");
-                        $("#page_content").load(page, {}, function (response, status, xhr) {
-                            hide_wait_process();
-                        });
-                    }
-                    else {
-                        console.log('Page is null!')
-                    }
-			    }
+            });
+            $("#navbar-menu").collapse('hide');
+            show_wait_process();
+            $(window).unbind('scroll');
+            page = page.replaceAll(" ", "%20");
+            $("#page_content").load(page, {}, function (response, status, xhr) {
+                hide_wait_process();
+            });
+        } else {
+            console.log('Page is null!')
+        }
+    }
 
 
-			    //搜索
-			    function search_mediainfo_media(tmdbid, doubanid, title, typestr) {
-			        hide_mediainfo_modal();
-			        if (!tmdbid && doubanid) {
-			            tmdbid = "DB:" + doubanid;
-			        }
-			        var param = {"tmdbid": tmdbid, "search_word": title, "media_type": typestr};
-			        show_wait_process();
-			        ajax_post("search", param, function (ret) {
-			            hide_wait_process();
-			            if (ret.code == 0) {
-			                dynamic_load('search?s=' + title);
-			            } else {
-			                show_fail_modal(ret.msg);
-			            }
-			        });
-			    }
-		</script>
-		<script type="text/javascript">
-			//浏览器兼容
-			    String.prototype.replaceAll = function (s1, s2) {
-			        return this.replace(new RegExp(s1, "gm"), s2)
-			    }
+    //搜索
+    function search_mediainfo_media(tmdbid, doubanid, title, typestr) {
+        hide_mediainfo_modal();
+        if (!tmdbid && doubanid) {
+            tmdbid = "DB:" + doubanid;
+        }
+        var param = {"tmdbid": tmdbid, "search_word": title, "media_type": typestr};
+        show_wait_process();
+        ajax_post("search", param, function (ret) {
+            hide_wait_process();
+            if (ret.code == 0) {
+                dynamic_load('search?s=' + title);
+            } else {
+                show_fail_modal(ret.msg);
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    //浏览器兼容
+    String.prototype.replaceAll = function (s1, s2) {
+        return this.replace(new RegExp(s1, "gm"), s2)
+    }
 
 
-			    //事件
-			    $(document).ready(function () {
-			        // 搜索输入框
-			        $('.home_search_word').bind('keypress', function (event) {
-			            if (event.keyCode == "13") {
-			                if (!$(this).val()) {
-			                    return;
-			                }
-			                dynamic_load('medialist?s=' + $(this).val() + '&f=1');
-			                $(this).val('');
-			            }
-			        });
+    //事件
+    $(document).ready(function () {
+        // 搜索输入框
+        $('.home_search_word').bind('keypress', function (event) {
+            if (event.keyCode == "13") {
+                if (!$(this).val()) {
+                    return;
+                }
+                dynamic_load('medialist?s=' + $(this).val() + '&f=1');
+                $(this).val('');
+            }
+        });
 
-			        //加载页面
-			        //打开第一个页面
-			        $("#navbar-menu").find("a[onclick]").first().trigger('click');
-			    });
+        //加载页面
+        //打开第一个页面
+        $("#navbar-menu").find("a[onclick]").first().trigger('click');
+    });
 
-			    //禁止双指放大
-			    document.documentElement.addEventListener('touchstart', function (event) {
-			        if (event.touches.length > 1) {
-			            event.preventDefault();
-			        }
-			    }, false);
+    //禁止双指放大
+    document.documentElement.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+            event.preventDefault();
+        }
+    }, false);
 
-			    //禁止双击放大
-			    var lastTouchEnd = 0;
-			    document.documentElement.addEventListener('touchend', function (event) {
-			        var now = Date.now();
-			        if (now - lastTouchEnd <= 300) {
-			            event.preventDefault();
-			        }
-			        lastTouchEnd = now;
-			    }, false);
-		</script>
-	</body>
+    //禁止双击放大
+    var lastTouchEnd = 0;
+    document.documentElement.addEventListener('touchend', function (event) {
+        var now = Date.now();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
+</script>
+</body>
 
 </html>
