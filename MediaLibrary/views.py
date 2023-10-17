@@ -75,6 +75,15 @@ def refresh_images(request):
     return HttpResponse('images')
 
 
+def search(request):
+    imdb = request.GET.get('imdb', 1)
+    tmdb = request.GET.get('tmdb', 1)
+    tmdb = request.GET.get('id', 1)
+    mlist = Media.objects.filter(Q(imdb_id=imdb))
+    return HttpResponse(mlist.__len__())
+    pass
+
+
 def test_local(request):
     f = open('./static/r.txt', 'r')
     text = f.read()

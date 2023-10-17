@@ -24,12 +24,16 @@ from WebPage import views as WebPage_views
 urlpatterns = [
     re_path(r'^$', WebPage_views.nav),
     path('upload/', views.receive),
+    path('search', views.search),
+    path('nav/', WebPage_views.nav),
+    path('imgs', WebPage_views.gallery),
+    path('gallery', WebPage_views.gallery),
+    path('movie_windows', WebPage_views.movie_windows),
+    re_path('dynamic/(?P<path>.*)', serve, {'document_root': settings.DYNAMIC_ROOT}),
+
+    # 测试接口
     path('match/', views.match),
     path('image', views.refresh_images),
     path('test', views.test_local),
     path('test_return', views.test_return),
-    path('nav/', WebPage_views.nav),
-    path('imgs', WebPage_views.gallery),
-    path('gallery', WebPage_views.gallery),
-    re_path('dynamic/(?P<path>.*)', serve, {'document_root': settings.DYNAMIC_ROOT}),
 ]

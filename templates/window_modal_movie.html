@@ -1,0 +1,40 @@
+<!-- 模态窗口 -->
+<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="card">
+            <div class="ribbon ribbon-top ribbon-bookmark bg-purple" id="system_media_vote"></div>
+            <div class="row row-0">
+                <div class="col-3 d-lg-block">
+                    <img id="dialog_media_poster" src="{{ movie.poster }}" onerror="this.src='/static/images/no-image.png'"
+                         class="w-100 h-100 object-cover">
+                </div>
+                <div class="col">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3">
+                            <div><strong id="dialog_i18n_title">{{ movie.i18n_title }}</strong> ({{ movie.year }})
+                            </div>
+                            <span class="text-muted" id="dialog_original_title">{{ movie.title }}</span>:
+                            <span class="text-muted" id="dialog_imdb_id">{{ movie.imdb_id }}</span>
+                        </h4>
+                        <br/>
+                        <div id="dialog_media_overview">电影简介</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col">
+            <div class="card-body">
+                <div>来自硬盘：<strong id="dialog_media_disk">{{ movie.disk }}</strong></div>
+                <div id="dialog_media_path">{{ movie.path }}</div>
+                <br/>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <a href="javascript:void(0)" class="card-btn" data-bs-dismiss="modal">
+                关闭
+            </a>
+        </div>
+    </div>
+</div>
