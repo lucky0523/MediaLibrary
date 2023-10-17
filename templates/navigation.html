@@ -292,7 +292,7 @@
 
     // test
     function test_load(page) {
-        $("#page_content").load("image", {}, function (response, status, xhr) {
+        $("#page_content").load(page, {}, function (response, status, xhr) {
             hide_wait_process();
         });
     }
