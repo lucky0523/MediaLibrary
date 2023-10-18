@@ -1,6 +1,7 @@
 import json
 import logging
 
+from django.db import connection
 from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -27,9 +28,15 @@ def gallery(request):
     one_page_count = 12
     page_num = request.GET.get('page', 1)
 
+    query = '''
+            SELECT * FROM MediaModel_media
+            where imdb_id is not null and imdb_id!=''
+            group by imdb_id
+            order by i18n_title
+            '''
+    mlist = Media.objects.raw(query)
+
     view_list = []
-    mlist = Media.objects.filter(~Q(imdb_id=''))
-    # mlist = mlist[one_page_count * (page_num - 1):one_page_count * page_num]
     for media in mlist:
         view_dict = {}
         view_dict['id'] = media.id
@@ -67,8 +74,8 @@ def gallery(request):
 
 
 def movie_windows(request):
-    db_id = request.GET.get('id', 1)
-    movie = Media.objects.filter(Q(id=db_id))[0]
+    database_id = request.GET.get('id', 1)
+    movie = Media.objects.filter(Q(id=database_id))[0]
 
     view_dict = {}
     view_dict['id'] = movie.id
