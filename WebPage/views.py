@@ -19,7 +19,7 @@ logger = logging.getLogger(LOG_TAG)
 def nav(request):
     dlist = HardDisk.objects.all()
     for d in dlist:
-        logger.info('\r\n' + str(d))
+        logger.info('Hard disk info:' + str(d))
     context = {'DiskList': dlist}
     return render(request, 'navigation.html', context)
 
@@ -75,25 +75,25 @@ def gallery(request):
 
 def movie_windows(request):
     database_id = request.GET.get('id', 1)
-    movie = Media.objects.filter(Q(id=database_id))[0]
+    click_movie = Media.objects.filter(Q(id=database_id))[0]
+    paths = list(Media.objects.filter(Q(imdb_id=click_movie.imdb_id)).values('disk_sn', 'path'))
+    logger.info('Open %s detail, get %d copy(s)' % (click_movie.get_i18n_title(), paths.__len__()))
 
     view_dict = {}
-    view_dict['id'] = movie.id
-    view_dict['year'] = movie.release_date.year
-    view_dict['disk'] = movie.disk_sn
-    view_dict['path'] = movie.path
-    view_dict['i18n_title'] = movie.get_i18n_title()
-    view_dict['title'] = movie.get_title()
-    view_dict['imdb_id'] = movie.get_imdb_id()
-    if not movie.image_paths == '':
+    view_dict['id'] = click_movie.id
+    view_dict['year'] = click_movie.release_date.year
+    view_dict['i18n_title'] = click_movie.get_i18n_title()
+    view_dict['title'] = click_movie.get_title()
+    view_dict['imdb_id'] = click_movie.get_imdb_id()
+    if not click_movie.image_paths == '':
         try:
-            view_dict['poster'] = eval(movie.image_paths)[Static.KEY_IMAGE_CATEGORY_POSTER][1:]
+            view_dict['poster'] = eval(click_movie.image_paths)[Static.KEY_IMAGE_CATEGORY_POSTER][1:]
         except SyntaxError as e:
             logger.error(e)
     if 'poster' not in view_dict or view_dict['poster'] == '':
         view_dict['poster'] = '/static/images/no-image.png'
 
-    context = {'movie': view_dict}
+    context = {'movie': view_dict, 'paths': paths}
     if request.method == 'POST':
         return render(request, 'window_modal_movie.html', context)
     else:

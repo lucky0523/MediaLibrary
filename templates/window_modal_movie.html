@@ -5,7 +5,8 @@
             <div class="ribbon ribbon-top ribbon-bookmark bg-purple" id="system_media_vote"></div>
             <div class="row row-0">
                 <div class="col-3 d-lg-block">
-                    <img id="dialog_media_poster" src="{{ movie.poster }}" onerror="this.src='/static/images/no-image.png'"
+                    <img id="dialog_media_poster" src="{{ movie.poster }}"
+                         onerror="this.src='/static/images/no-image.png'"
                          class="w-100 h-100 object-cover">
                 </div>
                 <div class="col">
@@ -25,8 +26,11 @@
         <br>
         <div class="col">
             <div class="card-body">
-                <div>来自硬盘：<strong id="dialog_media_disk">{{ movie.disk }}</strong></div>
-                <div id="dialog_media_path">{{ movie.path }}</div>
+                {% for item in paths %}
+                    <br>
+                    <div><strong id="dialog_media_disk">硬盘{{ item.disk_sn }}:</strong></div>
+                    <div>{{ item.path }}</div>
+                {% endfor %}
                 <br/>
             </div>
         </div>

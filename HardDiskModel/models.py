@@ -16,7 +16,7 @@ class HardDisk(models.Model):
     name = models.CharField(max_length=100, default="", null=True, blank=True)
 
     def __str__(self):
-        return 'Hard disk info:\r\nVendor:{}\r\nSeries:{}\r\nSN:{}\r\nCapacity:{}TB\r\nName:{}' \
+        return 'Vendor:{}, Series:{}, SN:{}, Capacity:{}TB, Name:{}' \
             .format(self.vendor,
                     self.series,
                     self.sn,

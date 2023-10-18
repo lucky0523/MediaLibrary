@@ -27,7 +27,7 @@ class Media(models.Model):
     actor = models.CharField(max_length=32, default="", null=True, blank=True)
     release_date = models.DateField(null=True, blank=True)
     disk_sn = models.CharField(max_length=32, default="", null=True, blank=True)
-    path = models.CharField(max_length=180, default="", null=True, blank=True)
+    path = models.TextField(default="", null=True, blank=True)
     update_time = models.DateTimeField(auto_now=True)
     upload_time = models.DateTimeField(auto_now_add=True)
     file_size = models.FloatField(default=0)
