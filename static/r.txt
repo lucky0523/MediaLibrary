@@ -1,26 +1,847 @@
 {
     "add_list": [
         {
-            "m_path": "\\Movies\\General.Magic.2018.REPACK.1080p.AMZN.WEB-DL.DDP2.0.H.264-NTG\\General.Magic.2018.REPACK.1080p.AMZN.WEB-DL.DDP2.0.H.264-NTG.mkv",
-            "m_size": 6444.0,
+            "m_path": "\\Movies\\read\\1917\\1917 2019 V2 ULTRAHD BluRay 2160p HEVC Atmos TrueHD7.1-sGnb@CHDBits",
+            "m_size": 87168.08,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u4e00\u4e2a\u53eb\u6b27\u7ef4\u7684\u7537\u4eba\u51b3\u5b9a\u53bb\u6b7b\\A Man Called Ove 2015 USA 1080p Blu-ray AVC DTS-HD MA 5.1-ltzww@CHDBits",
+            "m_size": 41439.1,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u4e3a\u5974\u5341\u4e8c\u8f7d\\12.Years.a.Slave.2013.1080p.BluRay.AVC.DTS.HD.MA.5.1-GeekArt@CHDBits",
+            "m_size": 48034.22,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u4eba\u6f6e\u6c79\u6d8c\\End Game 2021 V2 CHN Blu-ray 1080p AVC  Atmos TrueHD 7.1-Stars@CHDBits\\End Game 2021 V2 CHN Blu-ray 1080p AVC  Atmos TrueHD 7.1-Stars@CHDBits",
+            "m_size": 52380.04,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u4f55\u4ee5\u4e3a\u5bb6\\Capharnaum.2018.FRA.1080p.Blu-ray.AVC.DTS-HD.MA.5.1-Huan@HDSky.iso",
+            "m_size": 44689.69,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5065\u542c\u5973\u5b69\\CODA.2021.ITA.Blu-ray.1080p.AVC.DTS-HD.MA.5.1-DIY@TTG",
+            "m_size": 21796.72,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u529f\u592b\\Kung Fu Hustle 2004 CHN 1080p Blu-ray MPEG-2 LPCM 5.1-BHYS@CHDBits",
+            "m_size": 29088.83,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u52c7\u6562\u7684\u5fc3\\Braveheart 1995 ULTRAHD BluRay 2160p HEVC Atmos TrueHD7.1-sGnB@CHDBits",
+            "m_size": 89104.35,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5341\u4e8c\u6012\u6c49\\12 Angry Men 1957 Criterion Collection Blu-Ray 1080p AVC LPCM1.0 - \u767d\u81ea\u5728\\12 Angry Men 1957 Criterion Collection Blu-Ray 1080p AVC LPCM1.0 - \u767d\u81ea\u5728.iso",
+            "m_size": 43714.0,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5343\u4e0e\u5343\u5bfb\\Spirited.Away.2001.1080p.BluRay.AVC.DTS-HD.MA.6.1-KKYY@CHDBits",
+            "m_size": 38365.71,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5361\u871c\u513f\u00b7\u514b\u52b3\u5cb1\u5c14\\Camille Claudel 1988 1080p GER Blu-ray AVC DTS-HD MA 2.0-BHYS@CHDBits",
+            "m_size": 47064.55,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5362\u65fa\u8fbe\u996d\u5e97\\Hotel Rwanda 2004 Blu-ray 1080p AVC DTS-HD MA 5.1 - BHYS@CHDBits",
+            "m_size": 43920.47,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u559c\u798f\u4f1a\\The Joy Luck Club 1993 Blu-ray 1080p AVC DTS-HD MA 5.1-blucook#594@CHDBits\\The.Joy.Luck.Club.1993.Blu-ray.1080p.AVC.DTS-HD.MA.5.1@blucook#594.iso",
+            "m_size": 35075.88,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u56f0\u5728\u65f6\u95f4\u91cc\u7684\u7236\u4eb2\\The Father 2020 Blu-ray 1080p AVC DTS-HD MA 5.1-ltzww@CHDBits",
+            "m_size": 28317.19,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u56fd\u9645\u5e02\u573a\\Ode.to.My.Father.2014.Blu-ray.1080p.AVC.DTS-HD.MA.5.1-DIY@TTG",
+            "m_size": 37816.91,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u590f\u65e5\u53cb\u60c5\u5929\\Luca 2021 ULTRAHD Blu-ray 2160p HEVC TrueHD Atmos 7.1-sGnb@CHDBits",
+            "m_size": 58642.01,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5927\u4fa6\u63a2\u798f\u5c14\u6469\u65af\\Sherlock Holmes 2009 ULTRAHD BluRay 2160p HEVC DTS-HD MA 5.1-sGnb@CHDBits",
+            "m_size": 64638.23,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5927\u4fa6\u63a2\u798f\u5c14\u6469\u65af\\Sherlock Holmes A Game of Shadows 2011 ULTRAHD BluRay 2160p HEVC DTS-HD MA 5.1-sGnb@CHDBits",
+            "m_size": 64904.94,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5929\u56fd\u738b\u671d\\Kingdom.of.Heaven.2005.3in1.1080p.Ultimate.BluRay.Edition.AVC.DTS-HD.MA.5.1@guoren",
+            "m_size": 51050.09,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5931\u63a7\u73a9\u5bb6\\Free.Guy.2021.2160p.EUR.UHD.Blu-ray.HEVC.TrueHD.7.1-nn@CHDBits",
+            "m_size": 58448.01,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5934\u8111\u7279\u5de5\u961f\\Inside Out 2015 ULTRAHD Blu-ray 2160p HEVC TrueHD Atmos 7.1-sGnb@CHDBits",
+            "m_size": 59344.33,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5982\u6c90\u7231\u6cb3\\Like Someone in Love 2012 Criterion Collection 1080p Blu-ray AVC DTS-HD MA 5.1-ltzww@CHDBtis",
+            "m_size": 44358.73,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5b98\u65b9\u673a\u5bc6\\Official Secrets 2019 1080p FRA Blu-ray AVC DTS-HD MA 5.1-ltzww@CHDBits",
+            "m_size": 37428.84,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5c0f\u59d0\\The.Handmaiden.2016.Extended.1080p.KOR.Blu-ray.AVC.DTS-HD.MA.5.1-nn@CHDBits",
+            "m_size": 48510.14,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5fc3\u7075\u5947\u65c5\\Soul 2020 V2 ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnb@CHDBits",
+            "m_size": 64266.18,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u5fc3\u7075\u6355\u624b\\Good Will Hunting 1997 Blu-ray 1080p AVC DTS-HD MA 5.1-blucook#606@CHDBits\\Good.Will.Hunting.1997.Blu-ray.1080p.AVC.DTS-HD.MA.5.1@blucook#606.iso",
+            "m_size": 42846.81,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u6211\u63a7\u8bc9\\J accuse 2019 Blu-ray 1080p AVC DTS-HD MA 5.1-zchrs@CHDBits",
+            "m_size": 43828.48,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u6211\u7684\u7236\u4eb2\u6bcd\u4eb2\\The.Road.Home.1999.1080p.AMZN.WEB-DL.DDP5.1.H264-BHYS@CHD.mkv",
+            "m_size": 5195.29,
             "m_type": 3
         },
         {
-            "m_path": "\\Movies\\The.Big.Short.2015.BluRay.1080p.DTS-HD.MA.7.1.x265.10bit-CHD\\The.Big.Short.2015.BluRay.1080p.DTS-HD.MA.7.1.x265.10bit-CHD.mkv",
-            "m_size": 99,
+            "m_path": "\\Movies\\read\\\u6218\u4e89\u4e4b\u738b\\Lord of War 2005 ULTRAHD Blu-ray 2160p HEVC TrueHD Atmos 7.1-sGnb@CHDBits",
+            "m_size": 89127.05,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u65af\u5927\u6797\u683c\u52d2\\Stalingrad 1993 2160p UHD Blu-ray HEVC DTS-HD MA 5.1-BHYS@CHDBits",
+            "m_size": 93909.93,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u65af\u5df4\u8fbe300\u52c7\u58eb\\300 2006 V2 ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 64506.11,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u672c\u80fd\\Basic Instinct 1992 ULTRAHD BluRay 2160p HEVC DTS-HD MA 5.1-sGnb@CHDBits",
+            "m_size": 92360.62,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u6842\u6cb3\u5927\u6865\\The Bridge on the River Kwai 1957 Mastered in 4K REMASTERED Blu-ray 1080p AVC DTS-HDMA 5.1-9011@CHDBits",
+            "m_size": 47058.32,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u6d77\u4e0a\u94a2\u7434\u5e08\\The Legend of 1900 1998 Medusa Blu-ray 1080p VC-1 DTS-HD MA 5.1-BHYS@CHDBits",
+            "m_size": 45850.91,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u6d77\u738b\\Aquaman V2 2018 ULTRAHD Blu-ray 2160p HEVC Atmos TrueHD 7.1-sGnb@CHDBits",
+            "m_size": 92948.3,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u6df1\u6d77\u6d69\u52ab\\Deepwater Horizon 2016 ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 91518.63,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u706b\u7ebf\u72d9\u51fb\\In.The.Line.Of.Fire.1993.UHD.BluRay.2160p.HEVC.TrueHD.Atmos.7.1-nn@CHDBits",
+            "m_size": 98457.11,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7231\u56fd\u8005\\The Patriot 2000 ULTRAHD BluRay 2160p HEVC Atmos TrueHD7.1-sGnB@CHDBits",
+            "m_size": 98985.36,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7231\u5c14\u5170\u4eba\\The Irishman 2019 Criterion Collection Blu-ray 1080p AVC Atmos TrueHD 7.1-ltzww@CHDBits",
+            "m_size": 48309.02,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u732b\u9f20\u6e38\u620f\\Catch Me If You Can 2002 1080p Blu-ray AVC DTS-HD MA 5.1-9011@CHDBits",
+            "m_size": 48508.51,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u732b\u9f20\u6e38\u620f\\Catch Me If You Can 2002 1080p Blu-ray AVC DTS-HD MA 5.1-BHYS@CHDBits",
+            "m_size": 49137.23,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u771f\u5b9e\u7684\u8c0e\u8a00\\True Lies 1994 ESP Blu-ray 1080p AVC DTS-HD MA 5.1-blucook#622@CHDBits\\True.Lies.1994.ESP.Blu-ray.1080p.AVC.DTS-HD.MA.5.1@blucook#622.iso",
+            "m_size": 47946.88,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u786b\u78fa\u5c9b\u7684\u6765\u4fe1\\Letters from Iwo Jima 2006 1080p BluRay VC1 DD 5.1-chaaaaang@CHDBits",
+            "m_size": 27292.68,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u789f\u4e2d\u8c0d\\Mission Impossible Fallout 2018 ULTRAHD BluRay 2160p HEVC Atmos TrueHD7.1-sGnb@CHDBits",
+            "m_size": 98585.26,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u795e\u79d8\u6d77\u57df\\Uncharted 2022 UHD Blu-ray 2160p HEVC Atmos TrueHD 7.1-ltzww@CHDBits",
+            "m_size": 61438.95,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7a46\u8d6b\u5170\u9053\\Mulholland.Drive.2001.2160p.CC.UHD.Blu-ray.HEVC.DTS-HD.MA.5.1-GeekArt@CHDBits",
+            "m_size": 91208.15,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7a7f\u6761\u7eb9\u7761\u8863\u7684\u7537\u5b69\\The Boy in the Striped Pyjamas 2008 FRA BluRay 1080p AVC DTS-HD MA 5.1-LianHH@CHDBits",
+            "m_size": 33661.87,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7a83\u542c\u98ce\u66b4\\The Lives of Others 2006 1080p BluRay AVC LPCM 5.1-BHYS@CHDBits",
+            "m_size": 46397.04,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-007\\\u5e7d\u7075\u515a\\Spectre 2015 ULTRAHD Blu-ray 2160p HEVC DTS-HD MA 7.1-sGnb@CHDBits",
+            "m_size": 70732.89,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-007\\\u65e0\u6687\u8d74\u6b7b\\No Time to Die 2021 V1 ULTRAHD Blu-Ray 2160p HEVC Atmos TrueHD 7.1-sGnb@CHDBits",
+            "m_size": 92985.3,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-007\\\u96f7\u9706\u6740\u673a\\[BD]14\u4e4b\u96f7\u9706\u6740\u673aA View to a Kill 1985 BluRay 1080p AVC DTS-HD MA5.1-shhaclm@CHDBits",
+            "m_size": 44541.61,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u52a0\u52d2\u6bd4\u6d77\u76d7\\\u52a0\u52d2\u6bd4\u6d77\u76d71\uff1a\u9ed1\u73cd\u73e0\u53f7\u7684\u8bc5\u5492\\Pirates.of.the.Caribbean.The.Curse.of.the.Black.Pearl.2003.V2.2160p.UHD.Blu-ray.HEVC.HDR.TrueHD.Atmos.7.1-nn@CHDBits",
+            "m_size": 67727.89,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u52a0\u52d2\u6bd4\u6d77\u76d7\\\u52a0\u52d2\u6bd4\u6d77\u76d72\uff1a\u805a\u9b42\u68fa\\Pirates.of.the.Caribbean.Dead.Mans.Chest.2006.2160p.UHD.Blu-ray.HEVC.TrueHD.Atmos.7.1-nn@CHDBits",
+            "m_size": 67777.02,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u52a0\u52d2\u6bd4\u6d77\u76d7\\\u52a0\u52d2\u6bd4\u6d77\u76d73\uff1a\u4e16\u754c\u7684\u5c3d\u5934\\Pirates.of.the.Caribbean.At.Worlds.End.2007.2160p.UHD.Blu-ray.HEVC.TrueHD.Atmos.7.1-nn@CHDBits",
+            "m_size": 70443.06,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u52a0\u52d2\u6bd4\u6d77\u76d7\\\u52a0\u52d2\u6bd4\u6d77\u76d74\uff1a\u60ca\u6d9b\u602a\u6d6a\\Pirates.of.the.Caribbean.On.Stranger.Tides.2011.2160p.UHD.Blu-ray.HEVC.TrueHD.Atmos.7.1-nn@CHDBits",
+            "m_size": 73217.61,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u52a0\u52d2\u6bd4\u6d77\u76d7\\\u52a0\u52d2\u6bd4\u6d77\u76d75\uff1a\u6b7b\u65e0\u5bf9\u8bc1\\Pirates.of.the.Caribbean.Dead.Men.Tell.No.Tales.2017.2160p.UHD.Blu-ray.HEVC.TrueHD.Atmos.7.1-nn@CHDBits",
+            "m_size": 64943.07,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u593a\u5b9d\u5947\u5175\\\u593a\u5b9d\u5947\u5175\uff1a\u6cd5\u67dc\u5947\u5175\\Raiders.of.the.Lost.Ark.1981.2160p.UHD.Blu-ray.HEVC.TrueHD.7.1-GeekArt@CHDBits",
+            "m_size": 62510.69,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u5c0f\u9b3c\u5f53\u5bb6\\Home Alone 2.\u5c0f\u9b3c\u5f53\u5bb62.\u56fd\u914dDTS 5.1.Lost In New York.1992 1080p BluRay AVC DTS-HD MA 5.1-\u7eb3\u5170\u9f99\u8f69@HDArea.120M\\Home.Alone.2.Lost.In.New.York.1992.1080p.BluRay.AVC.DTS-HD.MA.5.1-\u7eb3\u5170\u9f99\u8f69@HDArea.iso",
+            "m_size": 38873.44,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u5c0f\u9b3c\u5f53\u5bb6\\Home.Alone.1990.2160p.UHD.Blu-ray.HEVC.DTS-HD.MA.5.1-GeekArt@CHDBits",
+            "m_size": 60964.8,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u5e0c\u533a\u67ef\u514b\\\u60ca\u9b42\u8bb0\\Vertigo 1958 Universal Blu-ray 1080p VC-1 DTS-HD MA 5.1-blucook#251@CHDBits\\Vertigo.1958.Universal.Blu-ray.1080p.VC-1.DTS-HD.MA.5.1@blucook#251.iso",
+            "m_size": 42577.56,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u5e0c\u533a\u67ef\u514b\\\u7f8e\u4eba\u8ba1\\Notorious 1946 MGM Blu-ray 1080p AVC DTS-HD MA 2.0-blucook#219@CHDBits\\Notorious.1946.MGM.Blu-ray.1080p.AVC.DTS-HD.MA.2.0@blucook#219.iso",
+            "m_size": 37196.88,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u5e0c\u533a\u67ef\u514b\\\u897f\u5317\u504f\u5317\\North by Northwest 1959 Blu-ray 1080p VC-1 TrueHD 5.1-blucook#244@CHDBits\\North.by.Northwest.1959.Blu-ray.1080p.VC-1.TrueHD.5.1@blucook#244.iso",
+            "m_size": 44882.5,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u75af\u72c2\u539f\u59cb\u4eba\\The Croods 2013 ULTRAHD BluRay 2160p HEVC DTS-X 7.1-sGnb@CHDBits",
+            "m_size": 87531.88,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u75af\u72c2\u539f\u59cb\u4eba\\The Croods A New Age 2020 V2 ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnb@CHDBits",
+            "m_size": 88760.55,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u7ec8\u7ed3\u8005\\\u7ec8\u7ed3\u8005\\[\u7ec8\u7ed3\u8005].The.Terminator.1984.Blu-ray.1080p.AVC.DTS-HD.MA5.1-CMCT",
+            "m_size": 34933.74,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u7ec8\u7ed3\u8005\\\u7ec8\u7ed3\u80052\uff1a\u5ba1\u5224\u65e5\\Terminator 2 Judgment Day 1991 ITA 2160p UHD Blu-ray AVC DTS-HD MA 5.1-fda80@CHDBits",
+            "m_size": 93062.74,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u7ec8\u7ed3\u8005\\\u7ec8\u7ed3\u80053\uff1a\u673a\u5668\u7684\u89c9\u9192\\[\u7ec8\u7ed3\u80053]Terminator.3.Rise.of.the.Machines.2003.Blu-ray.1080p.AVC.TrueHD5.1-CMCT",
+            "m_size": 36759.27,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u7ec8\u7ed3\u8005\\\u7ec8\u7ed3\u8005\uff1a2018\\Terminator Salvation 2009 2160p UHD BluRay HEVC DTS-HD MA 5.1-BHYS@CHDBits",
+            "m_size": 54724.34,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u7ec8\u7ed3\u8005\\\u7ec8\u7ed3\u8005\uff1a\u521b\u4e16\u7eaa\\Terminator Genisys 2015 ULTRAHD BluRay 2160p HEVC Atmos TrueHD7.1-sGnB@CHDBits",
+            "m_size": 67075.1,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u7ec8\u7ed3\u8005\\\u7ec8\u7ed3\u8005\uff1a\u9ed1\u6697\u547d\u8fd0\\Terminator Dark Fate V2 2019 ULTRAHD BluRay 2160p HEVC Atmos TrueHD7.1-sGnb@CHDBits",
+            "m_size": 67420.57,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u8c0d\u5f71\u91cd\u91cd\\\u53db\u8c0d\u8ffd\u51fb1\uff1a\u4f2f\u6069\u7684\u8eab\u4efd\\The Bourne Identity 2002 ULTRAHD BluRay 2160p HEVC DTS\uff1aX 7.1-sGnB@CHDBits",
+            "m_size": 61920.44,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u8c0d\u5f71\u91cd\u91cd\\\u53db\u8c0d\u8ffd\u51fb2\uff1a\u673a\u5bc6\u5708\u5957\\The Bourne Supremacy 2004 ULTRAHD BluRay 2160p HEVC DTS\uff1aX 7.1-sGnB@CHDBits",
+            "m_size": 64350.18,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u8c0d\u5f71\u91cd\u91cd\\\u53db\u8c0d\u8ffd\u51fb3\uff1a\u6700\u540e\u901a\u7252\\The Bourne Ultimatum 2007 ULTRAHD BluRay 2160p HEVC DTS\uff1aX 7.1-sGnB@CHDBits",
+            "m_size": 63959.52,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u8c0d\u5f71\u91cd\u91cd\\\u53db\u8c0d\u8ffd\u51fb4\uff1a\u673a\u5bc6\u9003\u6740\\The.Bourne.Legacy.2012.2160p.GER.UHD.Blu-ray.HEVC.DTSX-lingfriendly@OurBits",
+            "m_size": 60313.19,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u8c0d\u5f71\u91cd\u91cd\\\u53db\u8c0d\u8ffd\u51fb5\uff1a\u8eab\u4efd\u91cd\u542f\\Jason Bourne 2016 ULTRAHD Blu-ray 2160p HEVC DTSHD 7.1-SGnb@CHDBits",
+            "m_size": 63876.07,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\1 The Fast And The Furious 2001\\The Fast And The Furious 2001 Blu-Ray 1080p VC-1 DTS-HD MA 5.1-CHDBits.iso",
+            "m_size": 39098.06,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\1 The Fast And The Furious 2001\\The Fast And The Furious 2001 ULTRAHD Blu-Ray 2160p HEVC DTS-X 7.1-CHDBits.iso",
+            "m_size": 59779.38,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\2 Fast 2 Furious 2003\\2 Fast 2 Furious 2003 Blu-Ray 1080p VC-1 DTS-HD MA 5.1-CHDBits.iso",
+            "m_size": 36517.5,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\2 Fast 2 Furious 2003\\2 Fast 2 Furious 2003 ULTRAHD Blu-Ray 2160p HEVC DTS-X 7.1-CHDBits.iso",
+            "m_size": 58765.19,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\3 The Fast and the Furious Tokyo Drift 2006\\The Fast and the Furious Tokyo Drift 2006 Blu-Ray 1080p AVC DTS-HD MA 5.1-CHDBits.iso",
+            "m_size": 45377.62,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\3 The Fast and the Furious Tokyo Drift 2006\\The Fast and the Furious Tokyo Drift 2006 ULTRAHD Blu-Ray 2160p HEVC DTS-X 7.1-CHDBits.iso",
+            "m_size": 56649.0,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\4 Fast And Furious 2009\\Fast And Furious 2009 Blu-Ray 1080p VC-1 DTS-HD MA 5.1-CHDBits.iso",
+            "m_size": 47606.75,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\4 Fast And Furious 2009\\Fast And Furious 2009 ULTRAHD Blu-Ray 2160p HEVC DTS-X 7.1-CHDBits.iso",
+            "m_size": 59554.25,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\5 Fast Five 2011\\Fast Five 2011 Blu-Ray 1080p AVC DTS-HD MA 5.1-CHDBits.iso",
+            "m_size": 46196.69,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\5 Fast Five 2011\\Fast Five 2011 ULTRAHD Blu-Ray 2160p HEVC DTS-X 7.1-CHDBits.iso",
+            "m_size": 56318.0,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\6 Fast & Furious 6 2013\\Fast & Furious 6 2013 2in1 Blu-Ray 1080p AVC DTS-HD MA 5.1-CHDBits.iso",
+            "m_size": 46819.06,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\6 Fast & Furious 6 2013\\Fast & Furious 6 2013 2in1 ULTRAHD Blu-Ray 2160p HEVC DTS-X 7.1-CHDBits.iso",
+            "m_size": 57566.31,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\7 Furious Seven 2015\\Furious Seven 2015 2in1 Blu-Ray 1080p AVC DTS-HD MA 7.1-CHDBits.iso",
+            "m_size": 45574.25,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\7 Furious Seven 2015\\Furious Seven 2015 2in1 ULTRAHD Blu-Ray 2160p HEVC DTS-X 7.1-CHDBits.iso",
+            "m_size": 57694.19,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\8 The Fate of the Furious 2017\\The Fate of the Furious 2017 Blu-Ray 1080p AVC DTS-X 7.1-CHDBits.iso",
+            "m_size": 43876.75,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\8 The Fate of the Furious 2017\\The Fate of the Furious 2017 ULTRAHD Blu-Ray 2160p HEVC DTS-X 7.1-CHDBits.iso",
+            "m_size": 56768.12,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\Fast & Furious Presents Hobbs & Shaw 2019\\Fast & Furious Presents Hobbs & Shaw 2019 Blu-Ray 1080p AVC DTS-X 7.1-CHDBits.iso",
+            "m_size": 43716.5,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u901f\u5ea6\u4e0e\u6fc0\u60c5\\The Fast And The Furious 2001-2019 UHD Blu-Ray 2160p&1080p HEVC&AVC&VC-1 TrueHD Atmos 7.1&DTS-X 7.1&5.1-CHDBits\\Fast & Furious Presents Hobbs & Shaw 2019\\Fast & Furious Presents Hobbs & Shaw 2019 ULTRAHD Blu-Ray 2160p HEVC TrueHD Atmos 7.1-CHDBits.iso",
+            "m_size": 88678.88,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u9ed1\u5ba2\u5e1d\u56fd\\The Matrix 1999 ULTRAHD Blu-ray 2160p HEVC TrueHD Atmos 7.1-BHYS@sGnb@CHDBits",
+            "m_size": 76781.35,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u9ed1\u5ba2\u5e1d\u56fd\\The Matrix Reloaded 2003 ULTRAHD Blu-ray 2160p HEVC TrueHD Atmos 7.1-BHYS@sGnb@CHDBits",
+            "m_size": 94813.66,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u7cfb\u5217-\u9ed1\u5ba2\u5e1d\u56fd\\The Matrix Revolutions 2003 ULTRAHD Blu-ray 2160p HEVC TrueHD Atmos 7.1-BHYS@sGnb@CHDBits",
+            "m_size": 71877.06,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u82b1\u6728\u5170\\\u82b1\u6728\u5170 Mulan 2020 UHD Blu-ray 2160p HEVC TrueHD Atmos 7.1-Pete@HDSky\\Mulan 4K Ultra HD.iso",
+            "m_size": 63928.5,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u82b1\u751f\u9171\u730e\u9e70\\The Peanut Butter Falcon 2019 BluRay 1080p AVC DTS-HD MA5.1-ltzww@CHDBits",
+            "m_size": 22051.0,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u864e\u53e3\u8131\u9669\\La grande vadrouille.1966.50th.Anniversary.Blu-ray.1080p.AVC.DTS-HD MA-BHYS@CHDBits",
+            "m_size": 42321.16,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u8ba9\u5b50\u5f39\u98de\\\u8ba9\u5b50\u5f39\u98de\\Let.The.Bullets.Fly.2010.Blu-ray.1080p.AVC.LPCM.DTS-HDMA5.1-HDRoad.iso",
+            "m_size": 47732.0,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u8d85\u5e02\u591c\u672a\u7720\\Cashback 2006 JPN Blu-ray AVC 1080p DTS-HD MA 5.1-ltzww@CHDBits",
+            "m_size": 43249.89,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u8fbe\u62c9\u65af\u4e70\u5bb6\u4ff1\u4e50\u90e8\\Dallas.Buyers.Club.2013.BluRay.1080p.AVC.DTS-HD.MA5.1-BHYS@CHDBits",
+            "m_size": 35355.45,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u9505\u5320\uff0c\u88c1\u7f1d\uff0c\u58eb\u5175\uff0c\u95f4\u8c0d\\Tinker Tailor Soldier Spy 2011 Blu-ray 1080p AVC DTS-HD MA 5.1-ltzww@CHDBits",
+            "m_size": 47861.7,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u957f\u6c5f\u56fe\\Crosscurrent 2016 1080p USA Blu-ray AVC LPCM 2.0-DIY@3201\\CROSSCURRENT_DIY_3201.ISO",
+            "m_size": 21257.19,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u95f4\u8c0d\u4e4b\u6865\\Bridge.of.Spies.2015.US.Blu-ray.1080p.AVC.DTS-HD.MA.7.1-TPKHD@PTHome",
+            "m_size": 47057.0,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u963f\u62c9\u4e01\\Aladdin 2019 V2 ULTRAHD Blu-ray 2160p HEVC TrueHD Atmos 7.1-sGnb@CHDBits",
+            "m_size": 65285.38,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u963f\u7518\u6b63\u4f20\\Forrest Gump 1994 2160p UHD Blu-ray HEVC Atmos TrueHD 7.1-BHYS@CHDBits",
+            "m_size": 95144.78,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u98de\u8d8a\u75af\u4eba\u9662\\One Flew Over the Cuckoo\u2018s Nest 1975 35th Anniversary Edition CEE Blu-ray 1080p VC-1-BHYS@CHDBits",
+            "m_size": 29701.25,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u9b54\u517d\\Warcraft 2016 ULTRAHD Blu-ray 2160p HEVC TrueHD7 1-SGnb@CHDBits",
+            "m_size": 57438.72,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\read\\\u9ed1\u9e70\u5760\u843d\\Black Hawk Down 2001 2in1 ULTRAHD BluRay 2160p HEVC Atmos TrueHD7.1-sGnB@CHDBits",
+            "m_size": 100223.33,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\A Beautiful Mind 2001 US Blu-ray 1080p VC-1 DTS-HD MA 5.1-blucook#649@CHDBits\\A.Beautiful.Mind.2001.US.Blu-ray.1080p.VC-1.DTS-HD.MA.5.1@blucook#649.iso",
+            "m_size": 42883.31,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\A.Perfect.Planet.S01.V2.2160p.BluRay.HEVC.TrueHD.7.1.Atmos-BHYS@CHDBits\\DISC1",
+            "m_size": 83808.06,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\A.Perfect.Planet.S01.V2.2160p.BluRay.HEVC.TrueHD.7.1.Atmos-BHYS@CHDBits\\DISC2",
+            "m_size": 64226.26,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Bad Guy 2001 KOR Blu-ray 1080p AVC DTS-HD MA 5.1-blucook#640@CHDBits\\Bad.Guy.2001.KOR.Blu-ray.1080p.AVC.DTS-HD.MA.5.1@blucook#640.iso",
+            "m_size": 33321.81,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Baraka 1992 Blu-ray 1080p VC1 DTS-HD MA-HDS",
+            "m_size": 44820.22,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Cold War 2018 Criterion Collection 1080p BluRay AVC DTS-HD MA 5.1-ltzww@CHDBits",
+            "m_size": 43255.45,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Cute Girl 1980 + The Green Green Grass of Home 1982 MoC 1080p Blu-ray AVC LPCM 2.0-blucook#657@CHDBits\\Cute.Girl.1980.+.The.Green.Green.Grass.of.Home.1982.MoC.1080p.Blu-ray.AVC.LPCM.2.0@blucook#657.iso",
+            "m_size": 43790.0,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Diego.Maradona.2019.1080i.Blu-ray.AVC.DTS-HD.MA.5.1-nn@CHDBits",
+            "m_size": 45961.83,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Fanny and Alexander Theatrical Version 1982 CC Blu-ray 1080p AVC LPCM 1.0-blucook#175@CHDBits\\Fanny.and.Alexander.Theatrical.Version.1982.CC.Blu-ray.1080p.AVC.LPCM.1.0@blucook#175.iso",
+            "m_size": 47359.44,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Farewell My Concubine 1993 BFI Blu-ray 1080p AVC LPCM 2.0-blucook#351@CHDBits\\Farewell.My.Concubine.1993.BFI.Blu-ray.1080p.AVC.LPCM.2.0@blucook#351.iso",
+            "m_size": 48765.69,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Flowers of Shanghai 1998 PROPER FRA Blu-ray 1080p AVC DTS-HD MA 5.1-blucook#656@CHDBits\\Flowers.of.Shanghai.1998.PROPER.FRA.Blu-ray.1080p.AVC.DTS-HD.MA.5.1@blucook#656.iso",
+            "m_size": 47253.19,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Leon The Professional 1994 2in1 2160p UHD Blu-ray HEVC Atmos TrueHD 7.1-nn@CHDBits",
+            "m_size": 91962.57,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Liberation.1969-1971.3Disc.Blu-ray.1080p.AVC.DD.2.0-shiwo@CHDBits\\Liberation.Disc-1",
+            "m_size": 42893.19,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Liberation.1969-1971.3Disc.Blu-ray.1080p.AVC.DD.2.0-shiwo@CHDBits\\Liberation.Disc-2",
+            "m_size": 22950.97,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Liberation.1969-1971.3Disc.Blu-ray.1080p.AVC.DD.2.0-shiwo@CHDBits\\Liberation.Disc-3",
+            "m_size": 37067.15,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Little Women 2019 Blu-ray 1080p AVC DTS-HD MA5.1-ltzww@CHDBits",
+            "m_size": 45222.99,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Maadadayo 1993 JPN Blu-ray 1080i AVC LPCM 2.0-littleflat&blucook#407@CHDBits\\Maadadayo.1993.JPN.Blu-ray.1080i.AVC.LPCM.2.0@littleflat&blucook#407.iso",
+            "m_size": 37144.0,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Midnight.in.Paris.2011.BluRay.1080p.DTS-HD.MA.2.0.x265.10bit-CHD\\Midnight.in.Paris.2011.BluRay.1080p.DTS-HD.MA.2.0.x265.10bit-CHD.mkv",
+            "m_size": 4673.86,
             "m_type": 2
         },
         {
-            "m_path": "\\Movies\\The.Gray.Man.2022.1080p.NF.WEB-DL.DDP.5.1.Atmos.H.265-KKYY@CHDBits\\The.Gray.Man.2022.1080p.NF.WEB-DL.DDP.5.1.Atmos.H.265-KKYY@CHDBits.iso",
-            "m_size": 125,
+            "m_path": "\\Movies\\unread\\Mulholland Dr 2001 JPN Blu-ray 1080p AVC DTS-HD.MA.5.1-DIY@HDStar",
+            "m_size": 45818.12,
             "m_type": 1
         },
         {
-            "m_path": "\\Movies\\The.Green.Mile.1999.UHD.Blu-ray.2160p.HEVC.Atmos.TrueHD.7.1-nn@CHDBits",
-            "m_size": 4.08,
+            "m_path": "\\Movies\\unread\\Ponyo.on.the.Cliff.by.the.Sea.2008.BluRay.1080p.AVC.DTS-HD.MA.6.1-nn@CHDBits",
+            "m_size": 41920.92,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Pride & Prejudice 2005 1080p CHN Blu-ray VC-1 DTS-HD MA 5.1-BHYS@CHDBits",
+            "m_size": 42228.93,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Psycho 1960 2in1 ULTRAHD BluRay 2160p HEVC DTS\uff1aX 7.1-sGnB@CHDBits",
+            "m_size": 92996.25,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Rear Window 1954 2160p EUR UHD Blu-ray HEVC DTS-HD MA 2.0-ltzww@CHDBits",
+            "m_size": 93847.4,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Stand by Me 1986 2160p Blu-ray HEVC TrueHD Atmos 7.1-BHYS@CHDBits",
+            "m_size": 55686.15,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Sunset Blvd 1950 Blu-ray 1080p AVC TrueHD 2.0-blucook#481@CHDBits\\Sunset.Blvd.1950.Blu-ray.1080p.AVC.TrueHD.2.0@blucook#481.iso",
+            "m_size": 39708.31,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\The Making of Fanny and Alexander 1986 CC Blu-ray 1080p AVC Dolby Digital Audio 1.0-blucook#175@CHDBits\\The.Making.of.Fanny.and.Alexander.1986.CC.Blu-ray.1080p.AVC.Dolby.Digital.Audio.1.0@blucook#175.iso",
+            "m_size": 45068.06,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\The Ten Commandments 1956 2160p USA UHD Blu-ray HEVC DTS-HD MA 5.1-ltzww@CHDBits",
+            "m_size": 95024.95,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\The.Adventures.of.Robin.Hood.1938.1080p.BluRay.VC-1.DD1.0-WHV",
+            "m_size": 36445.75,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\The.Truman.Show.1998.Blu-ray.1080p.AVC.TrueHD5.1-BHYS@CHDBits",
+            "m_size": 40493.84,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Top Gun 1986 ULTRAHD BluRay 2160p HEVC Atmos TrueHD7.1-sGnB@CHDBits",
+            "m_size": 66474.18,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\V.for.Vendetta.2005.UHD.BluRay.2160p.HEVC.TrueHD.Atmos.7.1-BHYS@CHDBits",
+            "m_size": 89728.41,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\Winter Sleep 2014 1080p GBR Blu-ray AVC DTS-HD MA 5.1-ltzww@CHDBits",
+            "m_size": 45887.45,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u501f\u5200\u6740\u4eba Collateral 2004 UHD Blu-ray 2160p HEVC DTS-HD MA 5.1-Pete@HDSky\\Collateral 4K Ultra HD.iso",
+            "m_size": 64354.81,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u54c8\u5229\u6ce2\u7279\\Harry Potter and the Chamber of Secrets 2002 TW UHD BluRay CEE 2160p HEVC DTS-X 7.1-sGnB@CHDBits",
+            "m_size": 87077.85,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u54c8\u5229\u6ce2\u7279\\Harry Potter and the Deathly Hallows Part 1 2010 TW ULTRAHD BluRay 2160p HEVC DTS-X 7.1-sGnB@CHDBits",
+            "m_size": 73995.88,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u54c8\u5229\u6ce2\u7279\\Harry Potter and the Deathly Hallows Part 2 2011 TW ULTRAHD BluRay 2160p HEVC DTS-X 7.1-sGnB@CHDBits",
+            "m_size": 56801.18,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u54c8\u5229\u6ce2\u7279\\Harry Potter and the Goblet of Fire 2005 TW ULTRAHD BluRay 2160p HEVC DTS-X 7.1-sGnB@CHDBits",
+            "m_size": 65241.89,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u54c8\u5229\u6ce2\u7279\\Harry Potter and the Half-Blood Prince 2009 TW ULTRAHD BluRay 2160p HEVC DTS-X 7.1-sGnB@CHDBits",
+            "m_size": 76568.03,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u54c8\u5229\u6ce2\u7279\\Harry Potter and the Order of the Phoenix 2007 TW ULTRAHD BluRay 2160p HEVC DTS-X 7.1-sGnB@CHDBits",
+            "m_size": 69439.12,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u54c8\u5229\u6ce2\u7279\\Harry Potter and the Prisoner of Azkaban 2004 TW ULTRAHD BluRay 2160p HEVC DTS-X 7.1-sGnB@CHDBits",
+            "m_size": 76738.78,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u54c8\u5229\u6ce2\u7279\\Harry Potter and the Sorcerers Stone 2001 2160p TW UHD BluRay HEVC DTS-HD MA7.1-sGnB@CHDBits",
+            "m_size": 77888.13,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u6307\u73af\u738b\\The Hobbit An Unexpected Journey 2012 HKG Extended ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 83207.47,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u6307\u73af\u738b\\The Hobbit The Battle of the Five Armies 2014 HKG Extended ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 75095.89,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u6307\u73af\u738b\\The Hobbit The Desolation of Smaug 2013 HKG Extended ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 91653.26,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u6307\u73af\u738b\\The Lord of the Rings The Fellowship of the Ring 2001 HKG Extended ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits\\DISK1",
+            "m_size": 69219.09,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u6307\u73af\u738b\\The Lord of the Rings The Fellowship of the Ring 2001 HKG Extended ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits\\DISK2",
+            "m_size": 76712.4,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u6307\u73af\u738b\\The Lord of the Rings The Return of the King 2003 HKG Extended ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits\\DISC1",
+            "m_size": 77961.74,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u6307\u73af\u738b\\The Lord of the Rings The Return of the King 2003 HKG Extended ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits\\DISC2",
+            "m_size": 82809.9,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u6307\u73af\u738b\\The Lord of the Rings The Two Towers 2002 HKG Extended ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits\\DISC1",
+            "m_size": 68153.26,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u6307\u73af\u738b\\The Lord of the Rings The Two Towers 2002 HKG Extended ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits\\DISC2",
+            "m_size": 73587.92,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u751f\u5316\u5371\u673a\\Resident Evil 2002 ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 54569.29,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u751f\u5316\u5371\u673a\\Resident Evil Afterlife 2010 ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 56379.59,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u751f\u5316\u5371\u673a\\Resident Evil Apocalypse 2004 2in1 ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 59272.1,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u751f\u5316\u5371\u673a\\Resident Evil Extinction 2007 ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 57070.88,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u751f\u5316\u5371\u673a\\Resident Evil Retribution 2012 ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 58219.65,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u751f\u5316\u5371\u673a\\Resident Evil The Final Chapter 2016 ULTRAHD BluRay 2160p HEVC Atmos TrueHD 7.1-sGnB@CHDBits",
+            "m_size": 60082.89,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u79fb\u52a8\u8ff7\u5bab The Maze Runner 2014 UHD Blu-ray 2160p HEVC DTS-HD MA 7.1-Pete@HDSky\\The Maze Runner 4K Ultra HD.iso",
+            "m_size": 56261.88,
+            "m_type": 1
+        },
+        {
+            "m_path": "\\Movies\\unread\\\u8482\u51e1\u5c3c\u65e9\u9910\\Breakfast At Tiffany's.iso",
+            "m_size": 46187.69,
             "m_type": 1
         }
     ],
+    "api_version": "0.1",
     "disk_series": "Elements",
     "disk_sn": "9KGE9JNL",
     "disk_space": 14,
