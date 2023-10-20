@@ -1,3 +1,41 @@
+<head>
+    <style>
+        .table-body {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        table {
+            table-layout: fixed;
+            width: 100%;
+            border: 1px solid #DDDDDD;
+        }
+
+        th, td {
+            border-right: 1px solid #DDDDDD;
+        }
+
+        th {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        th:first-child,
+        td:first-child {
+            width: 10%; /* 这将设置第一列的宽度 */
+        }
+        th:hover {
+            background-color: #038659 !important;
+        }
+
+        td:hover {
+            background-color: #efefef !important;
+        }
+
+
+    </style>
+</head>
+
 <!-- 模态窗口 -->
 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -17,7 +55,6 @@
                             <span class="text-muted" id="dialog_original_title">{{ movie.title }}</span>:
                             <span class="text-muted" id="dialog_imdb_id">{{ movie.imdb_id }}</span>
                         </h4>
-                        <br/>
                         <div id="dialog_media_overview">电影简介</div>
                     </div>
                 </div>
@@ -26,14 +63,23 @@
         <br>
         <div class="col">
             <div class="card-body">
-                {% for item in paths %}
-                    <br>
-                    <div><strong id="dialog_media_disk">硬盘{{ item.disk_sn }}:</strong></div>
-                    <div>{{ item.path }}</div>
-                {% endfor %}
-                <br/>
+                <div class="table-body">
+                    <table>
+                        <tr>
+                            <th>硬盘</th>
+                            <th>路径</th>
+                        </tr>
+                        {% for item in paths %}
+                            <tr>
+                                <td>{{ item.disk_sn }}</td>
+                                <td>{{ item.path }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
             </div>
         </div>
+        <br>
 
         <div class="d-flex">
             <a href="javascript:void(0)" class="card-btn" data-bs-dismiss="modal">

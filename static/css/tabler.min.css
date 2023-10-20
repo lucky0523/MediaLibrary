@@ -5382,8 +5382,8 @@ textarea.form-control-lg {
 }
 
 .card {
-    --tblr-card-spacer-y: 1rem;
-    --tblr-card-spacer-x: 1.25rem;
+    --tblr-card-spacer-y: 0.75rem;
+    --tblr-card-spacer-x: 1rem;
     --tblr-card-title-spacer-y: 1.25rem;
     --tblr-card-border-width: 1px;
     --tblr-card-border-color: rgba(98, 105, 118, 0.16);
